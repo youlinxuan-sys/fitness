@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+*.log
+# Local dashboard symlinks; canonical publish copy lives in public/
+dashboard/index.html
+dashboard/data.json
