@@ -1,64 +1,165 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>完整教練菜單｜Fitness Dashboard</title>
-<style>
-:root{--bg:#061416;--card:rgba(13,38,42,.88);--card2:rgba(17,50,55,.7);--line:rgba(94,234,212,.18);--text:#e7fffb;--muted:#b3d8d3;--teal:#22d3c5;--teal2:#5eead4;--cyan:#38bdf8;--green:#9ae66e;--yellow:#facc15;--red:#fb7185;--radius:24px;--shadow:0 22px 80px rgba(0,0,0,.42)}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;color:var(--text);background:radial-gradient(circle at 16% -8%,rgba(34,211,197,.28),transparent 34%),radial-gradient(circle at 90% 0%,rgba(56,189,248,.16),transparent 30%),linear-gradient(135deg,var(--bg),#040809 72%);min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(94,234,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(94,234,212,.04) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
-.wrap{width:min(1280px,calc(100vw - 32px));margin:0 auto;padding:34px 0 70px;position:relative}.top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:22px}.eyebrow{color:var(--teal2);letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:900;margin-bottom:10px}h1{font-size:clamp(34px,4.5vw,58px);line-height:1.02;margin:0;letter-spacing:-.055em}.sub{color:var(--muted);font-size:16px;line-height:1.7;margin-top:12px;max-width:780px}.pill{border:1px solid var(--line);background:rgba(34,211,197,.09);color:#d9fffb;border-radius:999px;padding:10px 14px;white-space:nowrap}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.tab{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:999px;padding:10px 14px;color:var(--muted);font-weight:800}.tab.hot{background:rgba(34,211,197,.14);color:var(--text);border-color:rgba(94,234,212,.35)}
-.week{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),rgba(8,25,28,.8));border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin:18px 0;backdrop-filter:blur(18px)}.week-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:16px}h2{margin:0;font-size:28px;letter-spacing:-.04em}.week-note{color:var(--muted)}.days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.day{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:20px;overflow:hidden}.day-head{padding:16px;background:linear-gradient(135deg,rgba(34,211,197,.14),rgba(56,189,248,.06));border-bottom:1px solid var(--line)}.day-title{font-size:22px;font-weight:950;letter-spacing:-.03em}.focus{color:var(--muted);font-size:13px;margin-top:6px;line-height:1.4}.warm{margin:14px;padding:12px;border-radius:14px;background:rgba(250,204,21,.08);border:1px solid rgba(250,204,21,.18);color:#fff4bd;font-size:13px;line-height:1.6}.exercise{margin:12px 14px 14px;padding:14px;border-radius:16px;background:rgba(0,0,0,.18);border:1px solid rgba(94,234,212,.12)}.name{font-weight:900;line-height:1.35}.alt{color:var(--muted);font-size:12px;margin-top:7px}.sets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.set{background:rgba(34,211,197,.12);border:1px solid rgba(94,234,212,.20);color:#dffdfa;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}.rest{background:rgba(56,189,248,.11);border-color:rgba(56,189,248,.22);color:#d8f3ff}.note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}.footer{color:rgba(231,255,251,.45);text-align:center;font-size:12px;margin-top:22px}@media(max-width:1000px){.days{grid-template-columns:1fr}.top,.week-head{display:block}.pill{display:inline-block;margin-top:14px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitness & Health Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root{
+      --bg:#071617; --bg2:#0c2427; --card:rgba(13,38,42,.82); --card2:rgba(17,50,55,.72);
+      --line:rgba(105,255,232,.18); --text:#e7fffb; --muted:#b3d8d3; --soft:#c9fff7;
+      --teal:#22d3c5; --teal2:#5eead4; --cyan:#38bdf8; --green:#9ae66e; --yellow:#facc15; --red:#fb7185;
+      --shadow:0 22px 80px rgba(0,0,0,.42); --radius:24px;
+    }
+    *{box-sizing:border-box} body{margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; color:var(--text); background:radial-gradient(circle at 20% -10%, rgba(34,211,197,.28), transparent 34%), radial-gradient(circle at 90% 5%, rgba(56,189,248,.18), transparent 30%), linear-gradient(135deg,var(--bg),#050b0c 72%); min-height:100vh;}
+    body:before{content:""; position:fixed; inset:0; pointer-events:none; background-image:linear-gradient(rgba(94,234,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(94,234,212,.04) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(to bottom,black,transparent 85%)}
+    .wrap{width:min(1220px, calc(100vw - 32px)); margin:0 auto; padding:34px 0 60px; position:relative;}
+    header{display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:24px;}
+    .eyebrow{color:var(--teal2); letter-spacing:.16em; text-transform:uppercase; font-size:12px; font-weight:800; margin-bottom:10px;}
+    h1{font-size:clamp(32px,3.8vw,50px); line-height:1.06; margin:0; letter-spacing:-.055em; max-width:760px;}
+    .sub{color:var(--muted); margin-top:14px; font-size:17px; max-width:700px; line-height:1.7;}
+    .pill{border:1px solid var(--line); background:rgba(34,211,197,.09); color:var(--soft); border-radius:999px; padding:10px 14px; white-space:nowrap; box-shadow:inset 0 0 24px rgba(34,211,197,.05)}
+    .grid{display:grid; gap:16px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr)); margin-bottom:16px}.main{grid-template-columns:1.15fr .85fr; align-items:start}.bottom{grid-template-columns:.9fr 1.1fr; margin-top:16px}
+    .card{border:1px solid var(--line); background:linear-gradient(180deg,var(--card),rgba(8,25,28,.78)); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); backdrop-filter:blur(18px); position:relative; overflow:hidden;}
+    .card:after{content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(94,234,212,.08),transparent 38%); pointer-events:none}.card>*{position:relative; z-index:1}
+    .kpi .label{color:var(--muted); font-size:13px; font-weight:700}.kpi .value{font-size:42px; line-height:1; font-weight:900; letter-spacing:-.05em; margin-top:12px}.kpi .hint{color:var(--teal2); font-size:13px; margin-top:10px}.kpi small{font-size:18px; color:var(--muted)}
+    .section-title{display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:16px} h2{margin:0; font-size:20px; letter-spacing:-.02em}.muted{color:var(--muted)}
+    .calendar{display:grid; grid-template-columns:repeat(7,1fr); gap:8px}.dow{font-size:12px; color:var(--muted); text-align:center; font-weight:800}.day{min-height:78px; border:1px solid rgba(141,184,180,.15); background:rgba(255,255,255,.035); border-radius:16px; padding:10px; display:flex; flex-direction:column; justify-content:space-between}.day .num{font-weight:900}.day .tag{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}.planned{border-color:rgba(34,211,197,.35); background:rgba(34,211,197,.09)}.done{border-color:rgba(154,230,110,.45); background:rgba(154,230,110,.11)}.rest{border-color:rgba(56,189,248,.28); background:rgba(56,189,248,.08)}.missed{border-color:rgba(251,113,133,.42); background:rgba(251,113,133,.10)}
+    .next{display:grid; gap:12px}.big-next{font-size:28px; font-weight:900; letter-spacing:-.04em}.checklist{display:grid; gap:10px}.check{display:flex; align-items:center; gap:10px; color:var(--soft); padding:12px; border-radius:16px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}.dot{width:10px;height:10px;border-radius:99px;background:var(--teal); box-shadow:0 0 18px var(--teal)}
+    .log-empty{padding:20px; border:1px dashed rgba(94,234,212,.35); border-radius:18px; color:var(--muted); line-height:1.8; background:rgba(34,211,197,.045)}
+    .template{font-family:"SFMono-Regular",Consolas,monospace; font-size:13px; line-height:1.7; color:#d9fffb; background:rgba(0,0,0,.22); border:1px solid rgba(94,234,212,.16); border-radius:18px; padding:16px; white-space:pre-wrap;}
+    .legend{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}.legend span{font-size:12px; color:var(--muted); display:flex; gap:6px; align-items:center}.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+    canvas{max-height:260px}.program-day{padding:14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);margin-top:10px}.footer{margin-top:20px;color:rgba(231,255,251,.45);font-size:12px;text-align:center}
+
+    .workout-select{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:16px}.workout-select select{width:100%;border:1px solid rgba(94,234,212,.28);background:rgba(0,0,0,.24);color:var(--text);border-radius:16px;padding:13px 14px;font-size:16px;font-weight:800;outline:none}.workout-select button{border:1px solid rgba(94,234,212,.32);background:linear-gradient(135deg,rgba(34,211,197,.22),rgba(56,189,248,.12));color:var(--text);border-radius:16px;padding:0 16px;font-weight:900;cursor:pointer}.today-workout{display:grid;gap:12px}.today-head{padding:16px;border-radius:18px;background:linear-gradient(135deg,rgba(34,211,197,.16),rgba(56,189,248,.07));border:1px solid rgba(94,234,212,.18)}.today-title{font-size:30px;font-weight:950;letter-spacing:-.045em}.today-meta{color:var(--muted);margin-top:6px}.warmup-list{display:flex;flex-wrap:wrap;gap:8px}.warmup-chip{font-size:12px;font-weight:800;color:#fff4bd;background:rgba(250,204,21,.08);border:1px solid rgba(250,204,21,.2);border-radius:999px;padding:7px 10px}.exercise-list{display:grid;gap:10px}.exercise-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.18);border-radius:18px}.exercise-name{font-weight:900;line-height:1.35}.exercise-note{color:var(--muted);font-size:12px;line-height:1.45;margin-top:6px}.rx{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}.rx span{font-size:12px;font-weight:900;border-radius:999px;padding:7px 10px;background:rgba(34,211,197,.12);border:1px solid rgba(94,234,212,.2)}.rx .rest-chip{background:rgba(56,189,248,.11);border-color:rgba(56,189,248,.22)}
+    @media(max-width:900px){.kpis,.main,.bottom,.workout-select,.exercise-row{grid-template-columns:1fr} header{display:block}.pill{display:inline-block;margin-top:16px}.calendar{gap:6px}.day{min-height:64px;padding:8px} }
+  </style>
 </head>
-<body><div class="wrap">
-<div class="top"><div><div class="eyebrow">Coach program · full view</div><h1>完整菜單長這樣。</h1><div class="sub">Dashboard 首頁放摘要；完整菜單頁用週期分組、每天一張卡、每個動作用 chip 顯示組數重量和休息。之後可以做成可展開/收合。</div></div><div class="pill">A 週：1/3/5 週 · B 週：2/4 週</div></div>
-<div class="tabs"><div class="tab hot">總覽</div><div class="tab">A1</div><div class="tab">A2</div><div class="tab">A3</div><div class="tab">B1</div><div class="tab">B2</div><div class="tab">B3</div></div>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="eyebrow">Fitness system · Home Military Cut</div>
+        <h1>今天練什麼？</h1>
+        <div class="sub">打開就選今天菜單，照著徒手軍事 PT 動作、輪數、休息時間練；練完回報給我記錄。</div>
+      </div>
+      <div class="pill" id="phase">載入中…</div>
+    </header>
 
-<section class="week"><div class="week-head"><div><h2>Week A｜第一、三週（第五週可沿用）</h2><div class="week-note">主軸：深蹲 / 上肢推 / 上搏與划船 / 硬舉與單側訓練</div></div></div><div class="days">
-<div class="day"><div class="day-head"><div class="day-title">A1</div><div class="focus">抱槓式深蹲＋肩推＋窄臥推</div></div><div class="warm">熱身：肩胛骨熱身＋死蟲式仰握拉舉＋反向北歐＋躺姿腿下勾＋壺鈴風車，各 2 組</div>
-<div class="exercise"><div class="name">抱槓式深蹲</div><div class="alt">替代：降重｜備註：要保護架，手臂可墊東西</div><div class="sets"><span class="set">60kg × 5 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">坐姿槓鈴肩推</div><div class="alt">替代：坐姿架上肩推</div><div class="note">低點下巴；啟動前腋下手肘向前頂一下再推</div><div class="sets"><span class="set">27.5 × 10 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">地雷管壓縮單手爆發上推＋弓箭步換步</div><div class="alt">替代：降重</div><div class="sets"><span class="set">+7.5kg × 5 × 3</span><span class="set rest">休 3分以上</span></div></div>
-<div class="exercise"><div class="name">槓鈴窄臥推＋雙腳騰空</div><div class="alt">替代：啞鈴</div><div class="sets"><span class="set">40 × 8 × 3</span><span class="set rest">休 2–3分</span></div></div></div>
+    <section class="grid kpis">
+      <div class="card kpi"><div class="label">本週完成</div><div class="value"><span id="done">0</span><small>/<span id="planned">0</span></small></div><div class="hint" id="completionHint">等待六月開始</div></div>
+      <div class="card kpi"><div class="label">連續紀錄</div><div class="value" id="streak">0</div><div class="hint">天 streak</div></div>
+      <div class="card kpi"><div class="label">上次訓練</div><div class="value" style="font-size:28px" id="lastWorkout">尚未開始</div><div class="hint">運動後丟一句給我即可</div></div>
+      <div class="card kpi"><div class="label">身體狀態</div><div class="value" style="font-size:28px" id="readiness">待回報</div><div class="hint">精神 / 睡眠 / 痠痛</div></div>
+    </section>
 
-<div class="day"><div class="day-head"><div class="day-title">A2</div><div class="focus">引體向上＋上搏技術＋背部划船</div></div><div class="warm">熱身：肩胛骨熱身＋死蟲式仰握拉舉＋反向北歐＋躺姿腿下勾＋壺鈴風車，各 2 組</div>
-<div class="exercise"><div class="name">自身體重引體向上</div><div class="alt">替代：吊著不動</div><div class="sets"><span class="set">極限次數 - 1 × 3</span><span class="set rest">休 2分</span></div></div>
-<div class="exercise"><div class="name">懸吊反式划船</div><div class="alt">替代：雙腳踩地</div><div class="note">雙腳直膝放椅子上，背部收緊吊著</div><div class="sets"><span class="set">10–30秒 × 3</span><span class="set rest">休 2分</span></div></div>
-<div class="exercise"><div class="name">槓鈴窄高拉（上搏握距）</div><div class="alt">替代：降重</div><div class="sets"><span class="set">45kg × 3 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">分段式上搏 1.2.3.4段</div><div class="alt">替代：降重</div><div class="sets"><span class="set">40kg × 3 × 5</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">機械式坐姿單手划船</div><div class="alt">替代：降重</div><div class="note">手肘靠近身體時稍微旋轉，下盤坐穩</div><div class="sets"><span class="set">18下重量 × 15 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">腳夾椅子側棒式</div><div class="alt">替代：上半身進來一點</div><div class="sets"><span class="set">每邊10秒兩輪 × 3</span><span class="set rest">休 1分半</span></div></div></div>
+    <section class="grid main">
+      <div class="card">
+        <div class="section-title"><h2>訓練月曆</h2><span class="muted">planned / done / rest / missed</span></div>
+        <div class="calendar" id="calendar"></div>
+        <div class="legend"><span><i style="background:var(--teal)"></i>預計訓練</span><span><i style="background:var(--green)"></i>已完成</span><span><i style="background:var(--cyan)"></i>休息</span><span><i style="background:var(--red)"></i>未完成/需補</span></div>
+      </div>
+      <div class="card next">
+        <div class="section-title"><h2>今天照著練</h2><span class="muted">Workout mode</span></div>
+        <div class="workout-select">
+          <select id="workoutPicker" aria-label="選擇今天菜單"></select>
+          <button id="setTodayBtn">設為今天</button>
+        </div>
+        <div class="today-workout" id="todayWorkout"></div>
+        <div class="template">做完回報範例：
+今天做 A1。慢速深蹲 5輪、伏地挺身 12/10/10/8/8、分腿蹲完成。快走 35 分鐘，心率 132–144。感覺 7/10。</div>
+      </div>
+    </section>
 
-<div class="day"><div class="day-head"><div class="day-title">A3</div><div class="focus">六角槓硬舉＋臥推＋分腿蹲</div></div><div class="warm">熱身：肩胛骨熱身＋死蟲式仰握拉舉＋反向北歐＋躺姿腿下勾＋壺鈴風車，各 2 組</div>
-<div class="exercise"><div class="name">六角槓硬舉</div><div class="alt">替代：降重</div><div class="note">注意核心、腰部位置，穩定拉起</div><div class="sets"><span class="set">90 × 5 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">槓鈴半行程臥推</div><div class="alt">替代：啞鈴一樣半行程</div><div class="note">手肘屈曲 90 度高度，雙腳騰空</div><div class="sets"><span class="set">55 × 8 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">地雷管單側壓縮分腿蹲</div><div class="alt">替代：降重 or 壺鈴</div><div class="note">壓縮邊腳在前</div><div class="sets"><span class="set">+5kg × 8 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">地雷管單手肩推</div><div class="alt">替代：降重</div><div class="note">純上肢發力不借下肢</div><div class="sets"><span class="set">空槓每邊 × 12 × 3</span><span class="set rest">休 2分</span></div></div></div>
-</div></section>
+    <section class="grid bottom">
+      <div class="card">
+        <div class="section-title"><h2>週完成率</h2><span class="muted">Consistency</span></div>
+        <canvas id="completionChart"></canvas>
+      </div>
+      <div class="card">
+        <div class="section-title"><h2>快走 / 慢跑時間</h2><span class="muted">Cardio minutes</span></div>
+        <canvas id="cardioChart"></canvas><div class="log-empty" style="margin-top:14px;padding:14px">目前還沒有快走/慢跑紀錄。六月開始後會在這裡顯示每週分鐘數。</div>
+      </div>
+    </section>
 
-<section class="week"><div class="week-head"><div><h2>Week B｜第二、四週</h2><div class="week-note">主軸：架上蹲 / 臀推 / 抓舉與轉體 / 相撲硬舉</div></div></div><div class="days">
-<div class="day"><div class="day-head"><div class="day-title">B1</div><div class="focus">架上蹲＋臀推＋農夫行走</div></div><div class="warm">熱身：肩胛骨熱身＋死蟲式仰握拉舉＋反向北歐＋躺姿腿下勾＋壺鈴風車，各 2 組</div>
-<div class="exercise"><div class="name">肩槓架上蹲</div><div class="alt">替代：架子再調高</div><div class="note">保護架插起槓架往下第 3 格，放到架上停 1 秒收緊蓄力向上</div><div class="sets"><span class="set">100kg × 3 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">單腳姿單手啞鈴 / 壺鈴肩推</div><div class="alt">替代：降重</div><div class="note">負重邊膝蓋跪地</div><div class="sets"><span class="set">5kg × 12 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">槓鈴臀推</div><div class="alt">替代：機械式臀推</div><div class="sets"><span class="set">65 × 10–15 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">槓鈴窄臥推＋雙腳騰空</div><div class="alt">替代：啞鈴</div><div class="sets"><span class="set">45 × 8 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">單邊農夫槓負重行走</div><div class="alt">替代：雙手 or 降重</div><div class="sets"><span class="set">30kg 左右來回 × 4</span><span class="set rest">休 2分</span></div></div></div>
+    <section class="grid bottom">
+      <div class="card">
+        <div class="section-title"><h2>最近訓練紀錄</h2><span class="muted">Logs</span></div>
+        <div id="logs"></div>
+      </div>
+      <div class="card">
+        <div class="section-title"><h2>居家徒手軍事菜單</h2><span class="muted">Coach program</span></div>
+        <div id="program"></div>
+      </div>
+    </section>
+    <div class="footer">Local dashboard · ~/dashboard/fitness · Teal × Tech × Professional</div>
+  </div>
+<script>
+const stateClass={planned:'planned',done:'done',rest:'rest',missed:'missed'};
+const stateText={planned:'預計',done:'完成',rest:'休息',missed:'補'};
 
-<div class="day"><div class="day-head"><div class="day-title">B2</div><div class="focus">引體向上＋地雷管抓舉 / 轉體</div></div><div class="warm">熱身：肩胛骨熱身＋死蟲式仰握拉舉＋反向北歐＋躺姿腿下勾＋壺鈴風車，各 2 組</div>
-<div class="exercise"><div class="name">自身體重引體向上</div><div class="alt">替代：吊著不動</div><div class="sets"><span class="set">極限次數 - 1 × 3</span><span class="set rest">休 2分</span></div></div>
-<div class="exercise"><div class="name">懸吊反式划船</div><div class="alt">替代：雙腳踩地</div><div class="sets"><span class="set">10–30秒 × 3</span><span class="set rest">休 2分</span></div></div>
-<div class="exercise"><div class="name">地雷管單邊抓舉</div><div class="alt">替代：啞鈴 or 壺鈴</div><div class="sets"><span class="set">+5kg × 5 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">地雷管爆發轉體</div><div class="alt">替代：降重</div><div class="sets"><span class="set">+10kg × 5 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">機械式坐姿單手划船</div><div class="alt">替代：降重</div><div class="sets"><span class="set">18下重量 × 15 × 3</span><span class="set rest">休 2–3分</span></div></div>
-<div class="exercise"><div class="name">腳夾椅子側棒式</div><div class="alt">替代：上半身進來一點</div><div class="sets"><span class="set">每邊10秒兩輪 × 3</span><span class="set rest">休 1分半</span></div></div></div>
+function setupWorkoutMode(data){
+  const picker=document.getElementById('workoutPicker');
+  const saved=localStorage.getItem('fitness.selectedWorkout') || data.selectedWorkout || 'A1';
+  const keys=Object.keys(data.programs||{});
+  picker.innerHTML=keys.map(k=>`<option value="${k}">${data.programs[k].title}</option>`).join('');
+  picker.value=data.programs[saved]?saved:keys[0];
+  const render=()=>{
+    const key=picker.value; localStorage.setItem('fitness.selectedWorkout',key);
+    const w=data.programs[key];
+    document.getElementById('todayWorkout').innerHTML=`
+      <div class="today-head">
+        <div class="today-title">${w.title}</div>
+        <div class="today-meta">${w.week} · ${w.focus}</div>
+      </div>
+      <div class="warmup-list">${w.warmup.map(x=>`<span class="warmup-chip">${x}</span>`).join('')}</div>
+      <div class="exercise-list">
+        ${w.exercises.map((e,i)=>`<div class="exercise-row">
+          <div><div class="exercise-name">${i+1}. ${e.name}</div><div class="exercise-note">替代：${e.alt||'—'}${e.note?`｜${e.note}`:''}</div></div>
+          <div class="rx"><span>${e.prescription}</span><span class="rest-chip">休 ${e.rest}</span></div>
+        </div>`).join('')}
+      </div>`;
+  };
+  picker.addEventListener('change',render);
+  document.getElementById('setTodayBtn').addEventListener('click',render);
+  render();
+}
 
-<div class="day"><div class="day-head"><div class="day-title">B3</div><div class="focus">相撲硬舉＋啞鈴胸推＋北歐腿後勾</div></div><div class="warm">熱身：肩胛骨熱身＋死蟲式仰握拉舉＋反向北歐＋躺姿腿下勾＋壺鈴風車，各 2 組</div>
-<div class="exercise"><div class="name">大槓片相撲硬舉</div><div class="alt">替代：降重</div><div class="note">一樣直接拉起來</div><div class="sets"><span class="set">130 × 3 × 3</span><span class="set rest">休 5分</span></div></div>
-<div class="exercise"><div class="name">雙手啞鈴胸推</div><div class="alt">替代：啞鈴一樣半行程</div><div class="note">雙邊啞鈴呈八字形上下；慢速下降感受背頂椅子，胸闊開，腳騰空</div><div class="sets"><span class="set">27.5 × 5 × 3</span><span class="set rest">休 2分</span></div></div>
-<div class="exercise"><div class="name">北歐腿後勾</div><div class="alt">替代：機械式後勾</div><div class="note">離心慢速下降，最低點停 1 秒，然後用手推起來</div><div class="sets"><span class="set">6下 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">地雷管單手肩推</div><div class="alt">替代：降重 or 啞鈴</div><div class="note">可站姿也可單跪姿，純上肢發力不借下肢</div><div class="sets"><span class="set">空槓每邊 × 12 × 3</span><span class="set rest">休 3分</span></div></div>
-<div class="exercise"><div class="name">腳夾椅子側棒式</div><div class="alt">替代：上半身進來一點</div><div class="sets"><span class="set">每邊10秒兩輪 × 3</span><span class="set rest">休 1分半</span></div></div></div>
-</div></section>
-<div class="footer">完整菜單頁 · ~/dashboard/fitness/program.html</div>
-</div></body></html>
+function juneCalendar(items){
+  const map=new Map(items.map(x=>[x.date,x])); const el=document.getElementById('calendar');
+  ['一','二','三','四','五','六','日'].forEach(d=>el.insertAdjacentHTML('beforeend',`<div class="dow">${d}</div>`));
+  const first=new Date('2026-06-01T00:00:00'); const offset=(first.getDay()+6)%7;
+  for(let i=0;i<offset;i++) el.insertAdjacentHTML('beforeend','<div></div>');
+  for(let d=1; d<=30; d++){
+    const date=`2026-06-${String(d).padStart(2,'0')}`; const item=map.get(date); const cls=item?stateClass[item.state]:'';
+    el.insertAdjacentHTML('beforeend',`<div class="day ${cls}"><div class="num">${d}</div><div class="tag">${item?`${stateText[item.state]} · ${item.label}`:'—'}</div></div>`)
+  }
+}
+function chart(id, labels, datasets){
+  return new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets},options:{responsive:true,plugins:{legend:{labels:{color:'#c9fff7'}}},scales:{x:{ticks:{color:'#8db8b4'},grid:{color:'rgba(141,184,180,.08)'}},y:{beginAtZero:true,ticks:{color:'#8db8b4',precision:0},grid:{color:'rgba(141,184,180,.08)'}}}}})
+}
+fetch('./data.json').then(r=>r.json()).then(data=>{
+  document.getElementById('phase').textContent=`${data.profile.phase} · ${data.profile.goal}`;
+  document.getElementById('done').textContent=data.summary.completedThisWeek;
+  document.getElementById('planned').textContent=data.summary.plannedThisWeek;
+  document.getElementById('streak').textContent=data.summary.currentStreak;
+  document.getElementById('lastWorkout').textContent=data.summary.lastWorkout;
+  document.getElementById('readiness').textContent=data.summary.readiness;
+  setupWorkoutMode(data);
+  const pct=data.summary.plannedThisWeek?Math.round(data.summary.completedThisWeek/data.summary.plannedThisWeek*100):0;
+  document.getElementById('completionHint').textContent=`${pct}% completion`;
+  juneCalendar(data.calendar);
+  chart('completionChart',data.progress.weeklyCompletion.map(x=>x.week),[
+    {label:'預計',data:data.progress.weeklyCompletion.map(x=>x.planned),backgroundColor:'rgba(179,216,211,.38)',borderColor:'rgba(179,216,211,.72)',borderWidth:1},
+    {label:'完成',data:data.progress.weeklyCompletion.map(x=>x.done),backgroundColor:'rgba(34,211,197,.72)',borderColor:'#5eead4',borderWidth:1}
+  ]);
+  chart('cardioChart',data.progress.cardioMinutes.map(x=>x.week),[{label:'分鐘（六月開始後顯示）',data:data.progress.cardioMinutes.map(x=>x.minutes),backgroundColor:'rgba(56,189,248,.70)',borderColor:'#38bdf8',borderWidth:1}]);
+  const logs=document.getElementById('logs');
+  logs.innerHTML=data.logs.length?data.logs.map(l=>`<div class="program-day"><b>${l.date} · ${l.title}</b><div class="muted">${l.notes||''}</div></div>`).join(''):'<div class="log-empty">還沒有紀錄。六月開始後，每次運動完丟一句話，我會幫你補進這裡。</div>';
+  const program=document.getElementById('program');
+  program.innerHTML=data.coachProgram.days.length?data.coachProgram.days.map(d=>`<div class="program-day"><b>${d.name}</b><div class="muted">${d.notes||''}</div></div>`).join(''):`<div class="log-empty">${data.coachProgram.notes}</div>`;
+});
+</script>
+</body>
+</html>

@@ -1,16 +1,17 @@
 {
+  "selectedWorkout": "A1",
   "profile": {
     "owner": "游林軒",
     "startMonth": "2026-06",
-    "phase": "June foundation",
-    "goal": "一般自身體重訓練、快走/慢跑、建立穩定紀錄"
+    "phase": "Home Military Cut v1",
+    "goal": "90→80 kg｜徒手軍事PT｜體脂20–24%→12–14%"
   },
   "summary": {
-    "plannedThisWeek": 3,
+    "plannedThisWeek": 6,
     "completedThisWeek": 0,
     "currentStreak": 0,
     "lastWorkout": "尚未開始",
-    "nextWorkout": "A1：抱槓式深蹲＋坐姿槓鈴肩推",
+    "nextWorkout": "A1：Squat + Push Barracks",
     "readiness": "待回報"
   },
   "calendar": [
@@ -20,9 +21,19 @@
       "label": "A1"
     },
     {
+      "date": "2026-06-02",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
       "date": "2026-06-03",
       "state": "planned",
       "label": "A2"
+    },
+    {
+      "date": "2026-06-04",
+      "state": "planned",
+      "label": "C2"
     },
     {
       "date": "2026-06-05",
@@ -30,9 +41,14 @@
       "label": "A3"
     },
     {
+      "date": "2026-06-06",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
       "date": "2026-06-07",
       "state": "rest",
-      "label": "休息"
+      "label": "恢復"
     },
     {
       "date": "2026-06-08",
@@ -40,9 +56,19 @@
       "label": "B1"
     },
     {
+      "date": "2026-06-09",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
       "date": "2026-06-10",
       "state": "planned",
       "label": "B2"
+    },
+    {
+      "date": "2026-06-11",
+      "state": "planned",
+      "label": "C2"
     },
     {
       "date": "2026-06-12",
@@ -50,9 +76,14 @@
       "label": "B3"
     },
     {
+      "date": "2026-06-13",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
       "date": "2026-06-14",
       "state": "rest",
-      "label": "休息"
+      "label": "恢復"
     },
     {
       "date": "2026-06-15",
@@ -60,9 +91,19 @@
       "label": "A1"
     },
     {
+      "date": "2026-06-16",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
       "date": "2026-06-17",
       "state": "planned",
       "label": "A2"
+    },
+    {
+      "date": "2026-06-18",
+      "state": "planned",
+      "label": "C2"
     },
     {
       "date": "2026-06-19",
@@ -70,9 +111,14 @@
       "label": "A3"
     },
     {
+      "date": "2026-06-20",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
       "date": "2026-06-21",
       "state": "rest",
-      "label": "休息"
+      "label": "恢復"
     },
     {
       "date": "2026-06-22",
@@ -80,14 +126,44 @@
       "label": "B1"
     },
     {
+      "date": "2026-06-23",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
       "date": "2026-06-24",
       "state": "planned",
       "label": "B2"
     },
     {
+      "date": "2026-06-25",
+      "state": "planned",
+      "label": "C2"
+    },
+    {
       "date": "2026-06-26",
       "state": "planned",
       "label": "B3"
+    },
+    {
+      "date": "2026-06-27",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
+      "date": "2026-06-28",
+      "state": "rest",
+      "label": "恢復"
+    },
+    {
+      "date": "2026-06-29",
+      "state": "planned",
+      "label": "A1"
+    },
+    {
+      "date": "2026-06-30",
+      "state": "planned",
+      "label": "C1"
     }
   ],
   "logs": [],
@@ -95,22 +171,27 @@
     "weeklyCompletion": [
       {
         "week": "6/1",
-        "planned": 3,
+        "planned": 6,
         "done": 0
       },
       {
         "week": "6/8",
-        "planned": 3,
+        "planned": 6,
         "done": 0
       },
       {
         "week": "6/15",
-        "planned": 3,
+        "planned": 6,
         "done": 0
       },
       {
         "week": "6/22",
-        "planned": 3,
+        "planned": 6,
+        "done": 0
+      },
+      {
+        "week": "6/29",
+        "planned": 2,
         "done": 0
       }
     ],
@@ -130,334 +211,461 @@
       {
         "week": "6/22",
         "minutes": 0
+      },
+      {
+        "week": "6/29",
+        "minutes": 0
       }
     ]
   },
   "coachProgram": {
-    "status": "loaded",
-    "notes": "已從教練菜單照片 OCR 整理。第一、三、五週用 A；第二、四週用 B。每週三天。",
+    "status": "converted",
+    "notes": "已把原本健身房 A/B 教練菜單轉成在家徒手軍事 PT 版本：每週 6 練 1 恢復，15–30 分鐘/天。",
     "days": [
       {
-        "name": "A1｜第一/三/五週 Day 1",
-        "notes": "抱槓式深蹲 60×5×3、坐姿槓鈴肩推 27.5×10×3、地雷管爆發上推＋弓箭步 +7.5×5×3、槓鈴窄臥推 40×8×3"
+        "name": "身體數據",
+        "notes": "179 cm / 90 kg / 目標 80 kg / 33–34歲 / 靜止心率 60–66 / 無器材無傷"
       },
       {
-        "name": "A2｜第一/三/五週 Day 2",
-        "notes": "引體向上 極限-1×3、懸吊反式划船 10–30秒×3、槓鈴窄高拉 45×3×3、分段式上搏 40×3×5、坐姿單手划船、側棒式"
+        "name": "快走心率",
+        "notes": "HRmax 約185；主要快走區 130–145 bpm；145–150 可短暫碰到；150+ 對快走日偏硬"
       },
       {
-        "name": "A3｜第一/三/五週 Day 3",
-        "notes": "六角槓硬舉 90×5×3、槓鈴半行程臥推 55×8×3、地雷管單側壓縮分腿蹲 +5×8×3、地雷管單手肩推 空槓×12×3"
-      },
-      {
-        "name": "B1｜第二/四週 Day 1",
-        "notes": "肩槓架上蹲 100×3×3、單腳姿單手肩推 5×12×3、槓鈴臀推 65×10–15×3、槓鈴窄臥推 45×8×3、單邊農夫槓行走 30kg×4"
-      },
-      {
-        "name": "B2｜第二/四週 Day 2",
-        "notes": "引體向上 極限-1×3、懸吊反式划船、地雷管單邊抓舉 +5×5×3、地雷管爆發轉體 +10×5×3、坐姿單手划船、側棒式"
-      },
-      {
-        "name": "B3｜第二/四週 Day 3",
-        "notes": "大槓片相撲硬舉 130×3×3、雙手啞鈴胸推 27.5×5×3、北歐腿後勾 6下×3、地雷管單手肩推 空槓×12×3、側棒式"
+        "name": "飲食底線",
+        "notes": "蛋白質 130–175 g/day；熱量赤字先 -300～-500 kcal/day；每週降 0.45–0.9 kg"
       }
     ]
   },
   "programs": {
     "A1": {
-      "title": "A1｜抱槓式深蹲＋肩推＋窄臥推",
-      "week": "Week A｜第一、三、五週",
-      "focus": "下肢蹲、上肢推、爆發上推",
+      "title": "A1｜Squat + Push Barracks",
+      "week": "Week A｜下肢蹲＋上肢推",
+      "focus": "慢速深蹲、伏地挺身、分腿蹲、肩推替代",
       "warmup": [
-        "肩胛骨熱身",
-        "死蟲式仰握拉舉",
-        "反向北歐",
-        "躺姿腿下勾",
-        "壺鈴風車"
+        "原地高抬腿 45秒",
+        "手臂繞圈＋肩胛伏地挺身 45秒",
+        "徒手髖鉸鏈 15下",
+        "死蟲式 8/邊",
+        "深蹲到底站起 6下"
       ],
       "exercises": [
         {
-          "name": "抱槓式深蹲",
-          "alt": "降重",
-          "prescription": "60kg × 5 × 3組",
-          "rest": "3分",
-          "note": "要保護架，手臂可以墊東西"
+          "name": "慢速深蹲",
+          "alt": "扶牆深蹲",
+          "prescription": "15下 × 4–6輪｜下降3秒",
+          "rest": "45–75秒",
+          "note": "對應教練菜單的蹲類；膝蓋跟腳尖方向一致"
         },
         {
-          "name": "坐姿槓鈴肩推",
-          "alt": "坐姿架上肩推",
-          "prescription": "27.5 × 10 × 3組",
-          "rest": "2–3分",
-          "note": "低點下巴；啟動前腋下手肘向前頂一下再推"
+          "name": "伏地挺身",
+          "alt": "跪姿伏地挺身 / 上斜伏地挺身",
+          "prescription": "8–20下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "胸、肩、三頭；身體保持一直線"
         },
         {
-          "name": "地雷管壓縮單手爆發上推＋弓箭步換步",
-          "alt": "降重",
-          "prescription": "+7.5kg × 5 × 3組",
-          "rest": "3分以上",
-          "note": ""
+          "name": "分腿蹲",
+          "alt": "反向弓箭步",
+          "prescription": "10/邊 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "對應地雷管分腿蹲"
         },
         {
-          "name": "槓鈴窄臥推＋雙腳騰空",
-          "alt": "啞鈴",
-          "prescription": "40 × 8 × 3組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "Pike push-up",
+          "alt": "肩碰棒式",
+          "prescription": "6–12下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "肩推替代；臀部抬高，頭往地板方向"
+        },
+        {
+          "name": "死蟲式",
+          "alt": "棒式",
+          "prescription": "10/邊 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "核心穩定"
         }
       ]
     },
     "A2": {
-      "title": "A2｜引體向上＋上搏技術＋背部划船",
-      "week": "Week A｜第一、三、五週",
-      "focus": "拉、上搏技術、核心側棒",
+      "title": "A2｜Pull Substitute + Core",
+      "week": "Week A｜拉的替代＋核心",
+      "focus": "無單槓背部刺激、姿勢肌、側核心",
       "warmup": [
-        "肩胛骨熱身",
-        "死蟲式仰握拉舉",
-        "反向北歐",
-        "躺姿腿下勾",
-        "壺鈴風車"
+        "原地高抬腿 45秒",
+        "手臂繞圈＋肩胛伏地挺身 45秒",
+        "徒手髖鉸鏈 15下",
+        "死蟲式 8/邊",
+        "深蹲到底站起 6下"
       ],
       "exercises": [
         {
-          "name": "自身體重引體向上",
-          "alt": "吊著不動",
-          "prescription": "極限次數 - 1 × 3組",
-          "rest": "2分",
-          "note": ""
+          "name": "趴姿 Y-T-W raise",
+          "alt": "分開做 Y / T / W",
+          "prescription": "各8下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "無器材背部與肩胛控制"
         },
         {
-          "name": "懸吊反式划船",
-          "alt": "雙腳踩地",
-          "prescription": "10–30秒 × 3組",
-          "rest": "2分",
-          "note": "雙腳直膝放在椅子上，背部收緊吊著"
+          "name": "Reverse snow angel",
+          "alt": "超人式停留",
+          "prescription": "12下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "背部後側鏈"
         },
         {
-          "name": "槓鈴窄高拉（上搏握距）",
-          "alt": "降重",
-          "prescription": "45kg × 3 × 3組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "Superman pull-down",
+          "alt": "趴姿划船",
+          "prescription": "12下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "模擬下拉；夾背不要聳肩"
         },
         {
-          "name": "分段式上搏 1.2.3.4段",
-          "alt": "降重",
-          "prescription": "40kg × 3 × 5組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "側棒式",
+          "alt": "屈膝側棒式",
+          "prescription": "20–40秒/邊 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "保留教練菜單核心主軸"
         },
         {
-          "name": "機械式坐姿單手划船",
-          "alt": "降重",
-          "prescription": "18下重量 × 15 × 3組",
-          "rest": "2–3分",
-          "note": "手肘靠近身體時稍微旋轉，下盤坐穩"
-        },
-        {
-          "name": "腳夾椅子側棒式",
-          "alt": "上半身進來一點",
-          "prescription": "每邊10秒兩輪 × 3組",
-          "rest": "1分半",
-          "note": ""
+          "name": "Hollow hold",
+          "alt": "死蟲式",
+          "prescription": "15–30秒 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "前側核心"
         }
       ]
     },
     "A3": {
-      "title": "A3｜六角槓硬舉＋臥推＋分腿蹲",
-      "week": "Week A｜第一、三、五週",
-      "focus": "硬舉、臥推、單側腿",
+      "title": "A3｜Hinge + Chest + Split Leg",
+      "week": "Week A｜髖鉸鏈＋胸推替代＋單腳",
+      "focus": "單腳RDL、臀橋、伏地挺身、弓箭步",
       "warmup": [
-        "肩胛骨熱身",
-        "死蟲式仰握拉舉",
-        "反向北歐",
-        "躺姿腿下勾",
-        "壺鈴風車"
+        "原地高抬腿 45秒",
+        "手臂繞圈＋肩胛伏地挺身 45秒",
+        "徒手髖鉸鏈 15下",
+        "死蟲式 8/邊",
+        "深蹲到底站起 6下"
       ],
       "exercises": [
         {
-          "name": "六角槓硬舉",
-          "alt": "降重",
-          "prescription": "90 × 5 × 3組",
-          "rest": "3分",
-          "note": "注意核心、腰部位置，穩定拉起"
+          "name": "單腳羅馬尼亞硬舉",
+          "alt": "雙腳髖鉸鏈",
+          "prescription": "10/邊 × 4–6輪｜慢速",
+          "rest": "60–90秒",
+          "note": "對應硬舉；背打直，髖往後"
         },
         {
-          "name": "槓鈴半行程臥推",
-          "alt": "啞鈴一樣半行程",
-          "prescription": "55 × 8 × 3組",
-          "rest": "3分",
-          "note": "手肘屈曲90度高度，雙腳騰空"
+          "name": "臀橋",
+          "alt": "單腳臀橋",
+          "prescription": "20下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "臀腿後側"
         },
         {
-          "name": "地雷管單側壓縮分腿蹲",
-          "alt": "降重 or 壺鈴",
-          "prescription": "+5kg × 8 × 3組",
-          "rest": "3分",
-          "note": "壓縮邊腳在前"
+          "name": "伏地挺身",
+          "alt": "跪姿 / 上斜 / 腳墊高",
+          "prescription": "8–18下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "對應臥推"
         },
         {
-          "name": "地雷管單手肩推",
-          "alt": "降重",
-          "prescription": "空槓每邊 × 12 × 3組",
-          "rest": "2分",
-          "note": "純上肢發力不借下肢"
+          "name": "反向弓箭步",
+          "alt": "原地分腿蹲",
+          "prescription": "10/邊 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "單側腿"
+        },
+        {
+          "name": "棒式肩碰",
+          "alt": "一般棒式",
+          "prescription": "20下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "抗旋轉核心"
         }
       ]
     },
     "B1": {
-      "title": "B1｜架上蹲＋臀推＋農夫行走",
-      "week": "Week B｜第二、四週",
-      "focus": "架上蹲、臀推、負重行走",
+      "title": "B1｜Pause Squat + Glute",
+      "week": "Week B｜暫停蹲＋臀腿＋爬行",
+      "focus": "暫停深蹲、單腳臀橋、弓箭步、bear crawl",
       "warmup": [
-        "肩胛骨熱身",
-        "死蟲式仰握拉舉",
-        "反向北歐",
-        "躺姿腿下勾",
-        "壺鈴風車"
+        "原地高抬腿 45秒",
+        "手臂繞圈＋肩胛伏地挺身 45秒",
+        "徒手髖鉸鏈 15下",
+        "死蟲式 8/邊",
+        "深蹲到底站起 6下"
       ],
       "exercises": [
         {
-          "name": "肩槓架上蹲",
-          "alt": "架子再調高",
-          "prescription": "100kg × 3 × 3組",
-          "rest": "3分",
-          "note": "保護架插起槓架往下第3格，放到架上停1秒收緊蓄力向上"
+          "name": "暫停深蹲",
+          "alt": "扶牆深蹲",
+          "prescription": "12下 × 4–6輪｜底部停2秒",
+          "rest": "60–90秒",
+          "note": "對應架上蹲的停頓控制"
         },
         {
-          "name": "單腳姿單手啞鈴 or 壺鈴肩推",
-          "alt": "降重",
-          "prescription": "5kg × 12 × 3組",
-          "rest": "2–3分",
-          "note": "負重邊膝蓋跪地"
+          "name": "伏地挺身",
+          "alt": "跪姿 / 上斜 / 腳墊高",
+          "prescription": "10–20下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "推力"
         },
         {
-          "name": "槓鈴臀推",
-          "alt": "機械式臀推",
-          "prescription": "65 × 10–15 × 3組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "單腳臀橋",
+          "alt": "雙腳臀橋",
+          "prescription": "10–15/邊 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "對應臀推"
         },
         {
-          "name": "槓鈴窄臥推＋雙腳騰空",
-          "alt": "啞鈴",
-          "prescription": "45 × 8 × 3組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "反向弓箭步",
+          "alt": "原地分腿蹲",
+          "prescription": "12/邊 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "腿部耐力"
         },
         {
-          "name": "單邊農夫槓負重行走",
-          "alt": "雙手 or 降重",
-          "prescription": "30kg 左右來回 × 4組",
-          "rest": "2分",
-          "note": ""
+          "name": "Bear crawl",
+          "alt": "棒式肩碰",
+          "prescription": "20–40步 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "對應農夫走路的核心與肩帶穩定"
         }
       ]
     },
     "B2": {
-      "title": "B2｜引體向上＋地雷管抓舉/轉體",
-      "week": "Week B｜第二、四週",
-      "focus": "拉、爆發抓舉、旋轉力量",
+      "title": "B2｜Rotation + Pull Substitute",
+      "week": "Week B｜旋轉核心＋背部替代",
+      "focus": "背部、軀幹旋轉、登山者",
       "warmup": [
-        "肩胛骨熱身",
-        "死蟲式仰握拉舉",
-        "反向北歐",
-        "躺姿腿下勾",
-        "壺鈴風車"
+        "原地高抬腿 45秒",
+        "手臂繞圈＋肩胛伏地挺身 45秒",
+        "徒手髖鉸鏈 15下",
+        "死蟲式 8/邊",
+        "深蹲到底站起 6下"
       ],
       "exercises": [
         {
-          "name": "自身體重引體向上",
-          "alt": "吊著不動",
-          "prescription": "極限次數 - 1 × 3組",
-          "rest": "2分",
-          "note": ""
+          "name": "Superman pull-down",
+          "alt": "趴姿划船",
+          "prescription": "12–15下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "拉的替代"
         },
         {
-          "name": "懸吊反式划船",
-          "alt": "雙腳踩地",
-          "prescription": "10–30秒 × 3組",
-          "rest": "2分",
-          "note": "雙腳直膝放在椅子上，背部收緊吊著"
+          "name": "Prone swimmer",
+          "alt": "Reverse snow angel",
+          "prescription": "10下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "肩胛活動"
         },
         {
-          "name": "地雷管單邊抓舉",
-          "alt": "啞鈴 or 壺鈴",
-          "prescription": "+5kg × 5 × 3組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "Plank to down-dog",
+          "alt": "肩胛伏地挺身",
+          "prescription": "8–12下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "肩穩定"
         },
         {
-          "name": "地雷管爆發轉體",
-          "alt": "降重",
-          "prescription": "+10kg × 5 × 3組",
-          "rest": "2–3分",
-          "note": ""
+          "name": "Russian twist",
+          "alt": "坐姿抗旋轉停留",
+          "prescription": "20下 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "對應地雷管旋轉"
         },
         {
-          "name": "機械式坐姿單手划船",
-          "alt": "降重",
-          "prescription": "18下重量 × 15 × 3組",
-          "rest": "2–3分",
-          "note": "手肘靠近身體時稍微旋轉，下盤坐穩"
+          "name": "側棒式 hip dip",
+          "alt": "側棒式",
+          "prescription": "8–12/邊 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "側核心"
         },
         {
-          "name": "腳夾椅子側棒式",
-          "alt": "上半身進來一點",
-          "prescription": "每邊10秒兩輪 × 3組",
-          "rest": "1分半",
-          "note": ""
+          "name": "登山者",
+          "alt": "慢速登山者",
+          "prescription": "30秒 × 4–6輪",
+          "rest": "45–75秒",
+          "note": "心肺與核心"
         }
       ]
     },
     "B3": {
-      "title": "B3｜相撲硬舉＋啞鈴胸推＋北歐腿後勾",
-      "week": "Week B｜第二、四週",
-      "focus": "重拉、胸推、腿後側",
+      "title": "B3｜Sumo/Hamstring + Push",
+      "week": "Week B｜相撲蹲＋腿後側＋推",
+      "focus": "相撲深蹲、腿後 walkout、離心伏地挺身",
       "warmup": [
-        "肩胛骨熱身",
-        "死蟲式仰握拉舉",
-        "反向北歐",
-        "躺姿腿下勾",
-        "壺鈴風車"
+        "原地高抬腿 45秒",
+        "手臂繞圈＋肩胛伏地挺身 45秒",
+        "徒手髖鉸鏈 15下",
+        "死蟲式 8/邊",
+        "深蹲到底站起 6下"
       ],
       "exercises": [
         {
-          "name": "大槓片相撲硬舉",
-          "alt": "降重",
-          "prescription": "130 × 3 × 3組",
-          "rest": "5分",
-          "note": "一樣直接拉起來"
+          "name": "相撲深蹲",
+          "alt": "一般深蹲",
+          "prescription": "18下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "對應相撲硬舉的寬站距腿臀刺激"
         },
         {
-          "name": "雙手啞鈴胸推",
-          "alt": "啞鈴一樣半行程",
-          "prescription": "27.5 × 5 × 3組",
-          "rest": "2分",
-          "note": "雙邊啞鈴呈八字形上下；慢速下降感受背頂椅子，胸闊開，腳騰空"
+          "name": "Walkout to push-up",
+          "alt": "只做 walkout",
+          "prescription": "6–10下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "全身張力"
         },
         {
-          "name": "北歐腿後勾",
-          "alt": "機械式後勾",
-          "prescription": "6下 × 3組",
-          "rest": "3分",
-          "note": "離心慢速下降最低點停1秒，然後用手推起來"
+          "name": "臀橋腿後 walkout",
+          "alt": "臀橋停留",
+          "prescription": "6–10下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "對應北歐腿後勾"
         },
         {
-          "name": "地雷管單手肩推",
-          "alt": "降重 or 啞鈴",
-          "prescription": "空槓每邊 × 12 × 3組",
-          "rest": "3分",
-          "note": "可站姿也可單跪姿，純上肢發力不借下肢"
+          "name": "慢速離心伏地挺身",
+          "alt": "跪姿慢速離心",
+          "prescription": "5–8下 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "下降3–5秒"
         },
         {
-          "name": "腳夾椅子側棒式",
-          "alt": "上半身進來一點",
-          "prescription": "每邊10秒兩輪 × 3組",
-          "rest": "1分半",
+          "name": "側棒式",
+          "alt": "屈膝側棒式",
+          "prescription": "25–45秒/邊 × 4–6輪",
+          "rest": "60–90秒",
+          "note": "核心"
+        }
+      ]
+    },
+    "C1": {
+      "title": "C1｜軍事 HIIT EMOM",
+      "week": "Conditioning｜週二",
+      "focus": "波比、深蹲、伏地挺身、登山者",
+      "warmup": [
+        "原地高抬腿 45秒",
+        "肩胛伏地挺身 10下",
+        "深蹲 10下",
+        "髖鉸鏈 10下"
+      ],
+      "exercises": [
+        {
+          "name": "第1分鐘：波比",
+          "alt": "Squat thrust",
+          "prescription": "6–10下",
+          "rest": "剩餘時間",
+          "note": "做 12–20 分鐘"
+        },
+        {
+          "name": "第2分鐘：深蹲",
+          "alt": "半蹲",
+          "prescription": "20–25下",
+          "rest": "剩餘時間",
+          "note": ""
+        },
+        {
+          "name": "第3分鐘：伏地挺身",
+          "alt": "跪姿 / 上斜",
+          "prescription": "8–15下",
+          "rest": "剩餘時間",
+          "note": ""
+        },
+        {
+          "name": "第4分鐘：登山者",
+          "alt": "慢速登山者",
+          "prescription": "30–40秒",
+          "rest": "剩餘時間",
+          "note": "重複 3–5 輪"
+        }
+      ]
+    },
+    "C2": {
+      "title": "C2｜密度循環 AMRAP",
+      "week": "Conditioning｜週四",
+      "focus": "15–25分鐘盡量多輪，動作乾淨",
+      "warmup": [
+        "原地高抬腿 45秒",
+        "肩胛伏地挺身 10下",
+        "深蹲 10下",
+        "髖鉸鏈 10下"
+      ],
+      "exercises": [
+        {
+          "name": "開合跳",
+          "alt": "原地踏步",
+          "prescription": "40下",
+          "rest": "依需要短休",
+          "note": ""
+        },
+        {
+          "name": "伏地挺身",
+          "alt": "跪姿 / 上斜",
+          "prescription": "10下",
+          "rest": "依需要短休",
+          "note": ""
+        },
+        {
+          "name": "反向弓箭步",
+          "alt": "原地分腿蹲",
+          "prescription": "10/邊",
+          "rest": "依需要短休",
+          "note": ""
+        },
+        {
+          "name": "棒式",
+          "alt": "高棒式",
+          "prescription": "30秒",
+          "rest": "依需要短休",
+          "note": ""
+        },
+        {
+          "name": "Squat thrust 或波比",
+          "alt": "慢速 squat thrust",
+          "prescription": "8下",
+          "rest": "依需要短休",
+          "note": ""
+        },
+        {
+          "name": "Hollow hold",
+          "alt": "死蟲式",
+          "prescription": "20秒",
+          "rest": "依需要短休",
           "note": ""
         }
       ]
+    },
+    "Z2": {
+      "title": "Z2｜快走 / 行軍日",
+      "week": "Zone 2｜週六",
+      "focus": "心率 130–145 bpm，提升燃脂與恢復",
+      "warmup": [
+        "前5分鐘 100–125 bpm",
+        "步頻慢慢拉高",
+        "肩頸放鬆"
+      ],
+      "exercises": [
+        {
+          "name": "快走 / 慢跑走路交替",
+          "alt": "室內原地快走",
+          "prescription": "30–45分鐘",
+          "rest": "—",
+          "note": "主要區間 130–145 bpm；145–150 可短暫碰到；150+ 降速"
+        },
+        {
+          "name": "Talk test",
+          "alt": "—",
+          "prescription": "能講短句，不能唱歌",
+          "rest": "—",
+          "note": "喘到不能講短句就太硬"
+        },
+        {
+          "name": "冷卻走",
+          "alt": "—",
+          "prescription": "3–5分鐘降到110以下",
+          "rest": "—",
+          "note": "收操"
+        }
+      ]
     }
-  },
-  "selectedWorkout": "A1"
+  }
 }
