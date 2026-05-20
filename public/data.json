@@ -254,35 +254,45 @@
           "alt": "扶牆深蹲",
           "prescription": "15下 × 4–6輪｜下降3秒",
           "rest": "45–75秒",
-          "note": "對應教練菜單的蹲類；膝蓋跟腳尖方向一致"
+          "note": "對應教練菜單的蹲類；膝蓋跟腳尖方向一致",
+          "tutorialLabel": "ACE 圖文教學",
+          "tutorialUrl": "https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/"
         },
         {
           "name": "伏地挺身",
           "alt": "跪姿伏地挺身 / 上斜伏地挺身",
           "prescription": "8–20下 × 4–6輪",
           "rest": "45–75秒",
-          "note": "胸、肩、三頭；身體保持一直線"
+          "note": "胸、肩、三頭；身體保持一直線",
+          "tutorialLabel": "ACE 圖文教學",
+          "tutorialUrl": "https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/"
         },
         {
           "name": "分腿蹲",
           "alt": "反向弓箭步",
           "prescription": "10/邊 × 4–6輪",
           "rest": "45–75秒",
-          "note": "對應地雷管分腿蹲"
+          "note": "對應地雷管分腿蹲",
+          "tutorialLabel": "YouTube 教學",
+          "tutorialUrl": "https://www.youtube.com/results?search_query=bodyweight%20split%20squat%20proper%20form%20tutorial"
         },
         {
           "name": "Pike push-up",
           "alt": "肩碰棒式",
           "prescription": "6–12下 × 4–6輪",
           "rest": "45–75秒",
-          "note": "肩推替代；臀部抬高，頭往地板方向"
+          "note": "肩推替代；臀部抬高，頭往地板方向",
+          "tutorialLabel": "YouTube 教學",
+          "tutorialUrl": "https://www.youtube.com/results?search_query=pike%20push%20up%20proper%20form%20tutorial"
         },
         {
           "name": "死蟲式",
           "alt": "棒式",
           "prescription": "10/邊 × 4–6輪",
           "rest": "45–75秒",
-          "note": "核心穩定"
+          "note": "核心穩定",
+          "tutorialLabel": "YouTube 教學",
+          "tutorialUrl": "https://www.youtube.com/results?search_query=dead%20bug%20exercise%20proper%20form%20tutorial"
         }
       ]
     },
@@ -664,6 +674,39 @@
           "prescription": "3–5分鐘降到110以下",
           "rest": "—",
           "note": "收操"
+        }
+      ]
+    }
+  },
+  "tutorials": {
+    "A1": {
+      "status": "added",
+      "note": "A1 今日菜單已補教學連結；ACE 頁面為圖文教學，YouTube 連結為搜尋結果供挑選影片。",
+      "sources": [
+        {
+          "exercise": "慢速深蹲",
+          "label": "ACE 圖文教學",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/"
+        },
+        {
+          "exercise": "伏地挺身",
+          "label": "ACE 圖文教學",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/"
+        },
+        {
+          "exercise": "分腿蹲",
+          "label": "YouTube 教學",
+          "url": "https://www.youtube.com/results?search_query=bodyweight%20split%20squat%20proper%20form%20tutorial"
+        },
+        {
+          "exercise": "Pike push-up",
+          "label": "YouTube 教學",
+          "url": "https://www.youtube.com/results?search_query=pike%20push%20up%20proper%20form%20tutorial"
+        },
+        {
+          "exercise": "死蟲式",
+          "label": "YouTube 教學",
+          "url": "https://www.youtube.com/results?search_query=dead%20bug%20exercise%20proper%20form%20tutorial"
         }
       ]
     }
