@@ -11,9 +11,9 @@ Recommended Pages setting:
 - Source: GitHub Actions
 - Workflow: `.github/workflows/pages.yml`
 
-Expected URL after publishing under user `xuan1071` and repo `fitness`:
+Expected URL after publishing under GitHub account `youlinxuan-sys` and repo `fitness`:
 
-<https://xuan1071.github.io/fitness/>
+<https://youlinxuan-sys.github.io/fitness/>
 
 ## Local preview
 
