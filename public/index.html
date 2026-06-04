@@ -25,7 +25,7 @@
     .card:after{content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(94,234,212,.08),transparent 38%); pointer-events:none}.card>*{position:relative; z-index:1}
     .kpi .label{color:var(--muted); font-size:13px; font-weight:700}.kpi .value{font-size:42px; line-height:1; font-weight:900; letter-spacing:-.05em; margin-top:12px}.kpi .hint{color:var(--teal2); font-size:13px; margin-top:10px}.kpi small{font-size:18px; color:var(--muted)}
     .section-title{display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:16px} h2{margin:0; font-size:20px; letter-spacing:-.02em}.muted{color:var(--muted)}
-    .calendar{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:8px; width:100%; overflow:hidden}.dow{font-size:12px; color:var(--muted); text-align:center; font-weight:800; min-width:0}.day{min-height:78px; min-width:0; overflow:hidden; border:1px solid rgba(141,184,180,.15); background:rgba(255,255,255,.035); border-radius:16px; padding:10px; display:flex; flex-direction:column; justify-content:space-between}.day .num{font-weight:900}.day .tag{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}.planned{border-color:rgba(34,211,197,.35); background:rgba(34,211,197,.09)}.done{border-color:rgba(154,230,110,.45); background:rgba(154,230,110,.11)}.rest{border-color:rgba(56,189,248,.28); background:rgba(56,189,248,.08)}.missed{border-color:rgba(251,113,133,.42); background:rgba(251,113,133,.10)}
+    .calendar{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:8px; width:100%; overflow:hidden}.dow{font-size:12px; color:var(--muted); text-align:center; font-weight:800; min-width:0}.day{min-height:78px; min-width:0; overflow:hidden; border:1px solid rgba(141,184,180,.15); background:rgba(255,255,255,.035); border-radius:16px; padding:10px; display:flex; flex-direction:column; justify-content:space-between}.day .num{font-weight:900}.day .tag{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}.planned{border-color:rgba(34,211,197,.35); background:rgba(34,211,197,.09)}.done{border-color:rgba(154,230,110,.45); background:rgba(154,230,110,.11)}.rest{border-color:rgba(56,189,248,.28); background:rgba(56,189,248,.08)}.missed{border-color:rgba(251,113,133,.42); background:rgba(251,113,133,.10)}.today{border-color:rgba(251,191,36,.70); background:rgba(251,191,36,.14); outline:2px solid rgba(251,191,36,.65)}
     .next{display:grid; gap:12px}.big-next{font-size:28px; font-weight:900; letter-spacing:-.04em}.checklist{display:grid; gap:10px}.check{display:flex; align-items:center; gap:10px; color:var(--soft); padding:12px; border-radius:16px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}.dot{width:10px;height:10px;border-radius:99px;background:var(--teal); box-shadow:0 0 18px var(--teal)}
     .log-empty{padding:20px; border:1px dashed rgba(94,234,212,.35); border-radius:18px; color:var(--muted); line-height:1.8; background:rgba(34,211,197,.045)}
     .template{font-family:"SFMono-Regular",Consolas,monospace; font-size:13px; line-height:1.7; color:#d9fffb; background:rgba(0,0,0,.22); border:1px solid rgba(94,234,212,.16); border-radius:18px; padding:16px; white-space:pre-wrap;}
@@ -129,7 +129,11 @@ function setupWorkoutMode(data){
 function dynamicCalendar(calendarData){
   const now = new Date();
   const items=(calendarData&&calendarData.length)?calendarData:[];
-  const baseDate=items.length?new Date(items.find(x=>x.state==='done')?.date+'T00:00:00'||items[0].date+'T00:00:00'):now;
+  const todayIso = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+  const todayItem = items.find(x=>x.date===todayIso) || items.find(x=>x.state==='today');
+  const lastDone = [...items].reverse().find(x=>x.state==='done');
+  const baseIso = todayItem?.date || lastDone?.date || items[0]?.date;
+  const baseDate = baseIso ? new Date(baseIso+'T00:00:00') : now;
   const year = baseDate.getFullYear();
   const month = baseDate.getMonth();
   const monthName = `${year}-${String(month+1).padStart(2,'0')}`;
@@ -137,7 +141,7 @@ function dynamicCalendar(calendarData){
   el.innerHTML='';
   const title=document.querySelector('.section-title h2');
   if(title) title.textContent=`${monthName} 訓練月曆`;
-  const stateText={planned:'預定',done:'完成',rest:'恢復',missed:'略過'};
+  const stateText={planned:'預定',today:'今日',done:'完成',rest:'恢復',missed:'略過'};
   ['一','二','三','四','五','六','日'].forEach(d=>el.insertAdjacentHTML('beforeend',`<div class="dow">${d}</div>`));
   if(items.length){
     const monthItems=items.filter(item=>{
@@ -159,7 +163,7 @@ function dynamicCalendar(calendarData){
 function chart(id, labels, datasets){
   return new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets},options:{responsive:true,plugins:{legend:{labels:{color:'#c9fff7'}}},scales:{x:{ticks:{color:'#8db8b4'},grid:{color:'rgba(141,184,180,.08)'}},y:{beginAtZero:true,ticks:{color:'#8db8b4',precision:0},grid:{color:'rgba(141,184,180,.08)'}}}}})
 }
-fetch('./data.json').then(r=>r.json()).then(data=>{
+fetch('./data.json?ts='+Date.now(), {cache:'no-store'}).then(r=>{if(!r.ok) throw new Error('data '+r.status); return r.json()}).then(data=>{
   document.getElementById('phase').textContent=`${data.profile.phase} · ${data.profile.goal}`;
   document.getElementById('done').textContent=data.summary.completedThisWeek;
   document.getElementById('planned').textContent=data.summary.plannedThisWeek;
@@ -179,6 +183,10 @@ fetch('./data.json').then(r=>r.json()).then(data=>{
   logs.innerHTML=data.logs.length?data.logs.map(l=>`<div class="program-day"><b>${l.date} · ${l.title}</b><div class="muted">${l.notes||''}</div></div>`).join(''):'<div class="log-empty">還沒有紀錄。六月開始後，每次運動完丟一句話，我會幫你補進這裡。</div>';
   const program=document.getElementById('program');
   program.innerHTML=data.coachProgram.days.length?data.coachProgram.days.map(d=>`<div class="program-day"><b>${d.name}</b><div class="muted">${d.notes||''}</div></div>`).join(''):`<div class="log-empty">${data.coachProgram.notes}</div>`;
+}).catch(err=>{
+  const el=document.getElementById('calendar');
+  if(el) el.innerHTML=`<div class="log-empty" style="grid-column:1/-1">資料載入失敗：${err.message}</div>`;
+  console.error(err);
 });
 </script>
 </body>
