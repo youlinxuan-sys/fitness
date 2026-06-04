@@ -24,3 +24,13 @@
 - Soreness/injury: 俄羅斯轉體最累
 - Notes: 運動紀錄從 2026-05-20 正式開始；之後回報固定記 RPE/疲勞分數與最累項目。
 
+
+### 2026-06-04 — C1｜Bodyweight Conditioning Circuit
+
+- Plan: C1
+- Completed: 波比 10下、深蹲 25下、伏地挺身 15下、登山者 40秒，5組，共約20分鐘
+- Cardio: 超級喘、爆汗
+- Effort/RPE: 高
+- Energy/sleep: 未回報
+- Soreness/injury: 未回報；隔天留意腿部、肩胸與核心疲勞
+- Notes: 高密度徒手心肺/肌耐力訓練完成，強度很足。

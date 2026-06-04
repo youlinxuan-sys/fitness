@@ -1,174 +1,169 @@
 {
-  "selectedWorkout": "C2",
+  "selectedWorkout": "A3",
   "profile": {
     "owner": "游林軒",
-    "startMonth": "2026-05",
+    "startMonth": "2026-06",
     "phase": "Home PT v1",
     "goal": "90→80 kg｜徒手軍事PT｜HR 130–145"
   },
   "summary": {
     "plannedThisWeek": 6,
-    "completedThisWeek": 1,
-    "currentStreak": 1,
-    "lastWorkout": "5/20 B2｜RPE 7",
-    "nextWorkout": "C2：密度循環 AMRAP",
-    "readiness": "痠累爆汗；俄羅斯轉體最累"
+    "completedThisWeek": 4,
+    "currentStreak": 4,
+    "lastWorkout": "6/4 C1｜徒手循環5組：波比10、深蹲25、伏地15、登山者40秒，共20分，超級喘爆汗",
+    "nextWorkout": "6/5 A3：依腿/肩胸疲勞調整；若 C1 後仍很喘或腿痠，降低腿部量或改恢復心肺",
+    "readiness": "6/4 完成高密度徒手心肺/肌耐力 C1，20分鐘5組，主觀超級喘爆汗；6/5 留意腿部、肩胸與核心疲勞。"
   },
   "calendar": [
     {
-      "date": "2026-05-01",
-      "state": "planned",
-      "label": "A3"
-    },
-    {
-      "date": "2026-05-02",
-      "state": "planned",
-      "label": "Z2"
-    },
-    {
-      "date": "2026-05-03",
-      "state": "rest",
-      "label": "恢復"
-    },
-    {
-      "date": "2026-05-04",
-      "state": "planned",
-      "label": "B1"
-    },
-    {
-      "date": "2026-05-05",
-      "state": "planned",
-      "label": "C1"
-    },
-    {
-      "date": "2026-05-06",
-      "state": "planned",
-      "label": "B2"
-    },
-    {
-      "date": "2026-05-07",
-      "state": "planned",
-      "label": "C2"
-    },
-    {
-      "date": "2026-05-08",
-      "state": "planned",
-      "label": "B3"
-    },
-    {
-      "date": "2026-05-09",
-      "state": "planned",
-      "label": "Z2"
-    },
-    {
-      "date": "2026-05-10",
-      "state": "rest",
-      "label": "恢復"
-    },
-    {
-      "date": "2026-05-11",
-      "state": "planned",
-      "label": "A1"
-    },
-    {
-      "date": "2026-05-12",
-      "state": "planned",
-      "label": "C1"
-    },
-    {
-      "date": "2026-05-13",
-      "state": "planned",
-      "label": "A2"
-    },
-    {
-      "date": "2026-05-14",
-      "state": "planned",
-      "label": "C2"
-    },
-    {
-      "date": "2026-05-15",
-      "state": "planned",
-      "label": "A3"
-    },
-    {
-      "date": "2026-05-16",
-      "state": "planned",
-      "label": "Z2"
-    },
-    {
-      "date": "2026-05-17",
-      "state": "rest",
-      "label": "恢復"
-    },
-    {
-      "date": "2026-05-18",
-      "state": "planned",
-      "label": "B1"
-    },
-    {
-      "date": "2026-05-19",
-      "state": "planned",
-      "label": "C1"
-    },
-    {
-      "date": "2026-05-20",
+      "date": "2026-06-01",
       "state": "done",
-      "label": "B2 ✓"
+      "label": "A1 ✓"
     },
     {
-      "date": "2026-05-21",
-      "state": "planned",
-      "label": "C2"
+      "date": "2026-06-02",
+      "state": "done",
+      "label": "A2 ✓"
     },
     {
-      "date": "2026-05-22",
-      "state": "planned",
-      "label": "B3"
+      "date": "2026-06-03",
+      "state": "done",
+      "label": "C1 ✓"
     },
     {
-      "date": "2026-05-23",
-      "state": "planned",
-      "label": "Z2"
+      "date": "2026-06-04",
+      "state": "done",
+      "label": "C1 ✓"
     },
     {
-      "date": "2026-05-24",
-      "state": "rest",
-      "label": "恢復"
-    },
-    {
-      "date": "2026-05-25",
-      "state": "planned",
-      "label": "A1"
-    },
-    {
-      "date": "2026-05-26",
-      "state": "planned",
-      "label": "C1"
-    },
-    {
-      "date": "2026-05-27",
-      "state": "planned",
-      "label": "A2"
-    },
-    {
-      "date": "2026-05-28",
-      "state": "planned",
-      "label": "C2"
-    },
-    {
-      "date": "2026-05-29",
+      "date": "2026-06-05",
       "state": "planned",
       "label": "A3"
     },
     {
-      "date": "2026-05-30",
+      "date": "2026-06-06",
       "state": "planned",
       "label": "Z2"
     },
     {
-      "date": "2026-05-31",
+      "date": "2026-06-07",
       "state": "rest",
       "label": "恢復"
+    },
+    {
+      "date": "2026-06-08",
+      "state": "planned",
+      "label": "A1"
+    },
+    {
+      "date": "2026-06-09",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
+      "date": "2026-06-10",
+      "state": "planned",
+      "label": "A2"
+    },
+    {
+      "date": "2026-06-11",
+      "state": "planned",
+      "label": "C2"
+    },
+    {
+      "date": "2026-06-12",
+      "state": "planned",
+      "label": "A3"
+    },
+    {
+      "date": "2026-06-13",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
+      "date": "2026-06-14",
+      "state": "rest",
+      "label": "恢復"
+    },
+    {
+      "date": "2026-06-15",
+      "state": "planned",
+      "label": "A1"
+    },
+    {
+      "date": "2026-06-16",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
+      "date": "2026-06-17",
+      "state": "planned",
+      "label": "A2"
+    },
+    {
+      "date": "2026-06-18",
+      "state": "planned",
+      "label": "C2"
+    },
+    {
+      "date": "2026-06-19",
+      "state": "planned",
+      "label": "A3"
+    },
+    {
+      "date": "2026-06-20",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
+      "date": "2026-06-21",
+      "state": "rest",
+      "label": "恢復"
+    },
+    {
+      "date": "2026-06-22",
+      "state": "planned",
+      "label": "A1"
+    },
+    {
+      "date": "2026-06-23",
+      "state": "planned",
+      "label": "C1"
+    },
+    {
+      "date": "2026-06-24",
+      "state": "planned",
+      "label": "A2"
+    },
+    {
+      "date": "2026-06-25",
+      "state": "planned",
+      "label": "C2"
+    },
+    {
+      "date": "2026-06-26",
+      "state": "planned",
+      "label": "A3"
+    },
+    {
+      "date": "2026-06-27",
+      "state": "planned",
+      "label": "Z2"
+    },
+    {
+      "date": "2026-06-28",
+      "state": "rest",
+      "label": "恢復"
+    },
+    {
+      "date": "2026-06-29",
+      "state": "planned",
+      "label": "A1"
+    },
+    {
+      "date": "2026-06-30",
+      "state": "planned",
+      "label": "C1"
     }
   ],
   "logs": [
@@ -176,24 +171,39 @@
       "date": "2026-05-20",
       "title": "B2｜Rotation + Pull Substitute",
       "notes": "完成：1) 15下×4組、2) 10下×4組、3) 12下×4組、4) 20下×4組、5) 12下×4組、6) 4組。RPE 7/10。感受：又痠又累、爆汗。最累：俄羅斯轉體。"
+    },
+    {
+      "date": "2026-05-31",
+      "title": "C2｜密度訓練",
+      "notes": "完成：19分鐘 4輪。感受：很喘；第5輪應該可以，但大腿會太痠。判斷：本次停在4輪合理，優先保留下次訓練品質。"
+    },
+    {
+      "date": "2026-06-01",
+      "title": "A1｜Squat + Push Barracks",
+      "notes": "完成：深蹲 15下×4組、伏地挺身 20下×4組、分腿蹲 10下×4組、Pike 12下×4組、死蟲式 10下×4組。感受：爆汗、很喘、做完沒什麼力。判斷：A1強度足夠，今天不用加量，優先恢復。"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "A2｜Pull + Clean Power",
+      "notes": "完成：自身引體向上 2下×3組、懸吊反式划船 30秒×3組、窄高拉 45公斤 3下×3組、分段上搏 40公斤 3下×4組、側腹核心 3組；快走 20分鐘。心率：最低 92、最高 144。判斷：拉力與上搏訓練完成，最高心率落在目標區上緣，今天算有效訓練；隔天留意前臂/背闊/核心疲勞。"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "C1｜Strength + Core Stability",
+      "notes": "完成：六角槓硬舉 100kg 5下×3組（注意核心與腰部位置，穩定拉起）；半行程臥推 65kg 8下×3組（手肘屈曲90度高度、雙腳騰空）；地雷管單側壓縮分腿蹲 7.5kg 8下×3組（壓縮邊腳在前）；地雷管單手肩推 5kg 12下×3組（純上肢發力不借下肢）；快走 20分鐘，心率約 130。判斷：今天是下肢髖伸/推力與核心穩定訓練，100kg 六角槓硬舉強度足，臥推雙腳騰空也增加核心要求；隔天留意下背、臀腿與肩推疲勞。"
+    },
+    {
+      "date": "2026-06-04",
+      "title": "C1｜Bodyweight Conditioning Circuit",
+      "notes": "完成：波比 10下、深蹲 25下、伏地挺身 15下、登山者 40秒，5組，共約20分鐘。感受：超級喘、爆汗。判斷：高密度徒手心肺/肌耐力訓練完成，強度很足；隔天留意腿部、肩胸與核心疲勞。"
     }
   ],
   "progress": {
     "weeklyCompletion": [
       {
-        "week": "5/18",
-        "planned": 6,
-        "done": 1
-      },
-      {
-        "week": "5/25",
-        "planned": 6,
-        "done": 0
-      },
-      {
         "week": "6/1",
         "planned": 6,
-        "done": 0
+        "done": 4
       },
       {
         "week": "6/8",
@@ -203,19 +213,21 @@
       {
         "week": "6/15",
         "planned": 6,
+        "done": 0
+      },
+      {
+        "week": "6/22",
+        "planned": 6,
+        "done": 0
+      },
+      {
+        "week": "6/29",
+        "planned": 2,
         "done": 0
       }
     ],
     "cardioMinutes": [
       {
-        "week": "5/18",
-        "minutes": 0
-      },
-      {
-        "week": "5/25",
-        "minutes": 0
-      },
-      {
         "week": "6/1",
         "minutes": 0
       },
@@ -225,6 +237,14 @@
       },
       {
         "week": "6/15",
+        "minutes": 0
+      },
+      {
+        "week": "6/22",
+        "minutes": 0
+      },
+      {
+        "week": "6/29",
         "minutes": 0
       }
     ]
