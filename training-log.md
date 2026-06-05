@@ -34,3 +34,14 @@
 - Energy/sleep: 未回報
 - Soreness/injury: 未回報；隔天留意腿部、肩胸與核心疲勞
 - Notes: 高密度徒手心肺/肌耐力訓練完成，強度很足。
+
+### 2026-06-05 — Rest｜主動恢復日
+
+- Plan: 原 A3，依 6/4 C1 高密度訓練後疲勞調整為休息
+- Completed: 休息
+- Cardio: 無
+- Effort/RPE: 恢復日
+- Energy/sleep: 未回報
+- Soreness/injury: 未回報；預設留意腿部、肩胸與核心疲勞
+- Notes: 主動休息，不算 missed；6/6 依狀態選 Z2 或低強度快走。
+
