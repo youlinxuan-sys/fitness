@@ -1,5 +1,5 @@
 {
-  "selectedWorkout": "Z2",
+  "selectedWorkout": "A1",
   "profile": {
     "owner": "游林軒",
     "startMonth": "2026-06",
@@ -8,11 +8,11 @@
   },
   "summary": {
     "plannedThisWeek": 6,
-    "completedThisWeek": 4,
-    "currentStreak": 0,
-    "lastWorkout": "6/5 休息｜前一日 C1 高密度徒手循環後安排恢復日，未訓練",
-    "nextWorkout": "6/6 Z2 或恢復心肺：依腿部、肩胸與核心疲勞調整；若仍痠，低強度快走即可",
-    "readiness": "6/5 主動休息恢復；延續 6/4 高強度 C1 後的疲勞管理。6/6 依精神與痠痛選 Z2/恢復心肺，不硬補強度。"
+    "completedThisWeek": 5,
+    "currentStreak": 1,
+    "lastWorkout": "6/7 健身課｜槓鈴上搏 45kg；6/6 安排休息恢復。",
+    "nextWorkout": "6/8 A1｜下週維持健身菜單與網頁菜單並進：健身課照教練內容，網頁菜單作為居家/補強版本。",
+    "readiness": "6/6 已休息，6/7 完成健身課與 45kg 槓鈴上搏。下週不用硬加量；維持教練健身菜單＋網頁菜單並行，若健身課強度高，網頁菜單可降為技術/恢復版。"
   },
   "calendar": [
     {
@@ -42,18 +42,18 @@
     },
     {
       "date": "2026-06-06",
-      "state": "planned",
-      "label": "Z2"
+      "state": "rest",
+      "label": "休息"
     },
     {
       "date": "2026-06-07",
-      "state": "rest",
-      "label": "恢復"
+      "state": "done",
+      "label": "健身課 ✓"
     },
     {
       "date": "2026-06-08",
       "state": "planned",
-      "label": "A1"
+      "label": "A1 + 健身"
     },
     {
       "date": "2026-06-09",
@@ -201,6 +201,16 @@
       "date": "2026-06-05",
       "title": "Rest｜主動恢復日",
       "notes": "今天運動休息。判斷：6/4 完成高密度徒手循環後安排恢復合理；不算 missed，作為疲勞管理。隔天依腿部、肩胸與核心狀態選 Z2 或低強度快走。"
+    },
+    {
+      "date": "2026-06-06",
+      "title": "Rest｜完整休息日",
+      "notes": "今天運動休息。判斷：連續訓練後安排恢復，保留隔天健身課品質；不算 missed。"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "Gym Class｜槓鈴上搏 45kg",
+      "notes": "完成：上健身課，槓鈴上搏 45kg。判斷：爆發力/技術訓練有進度；下週維持健身菜單與網頁菜單並進，健身課為主、網頁菜單作為居家補強與心肺安排。"
     }
   ],
   "progress": {
@@ -208,7 +218,7 @@
       {
         "week": "6/1",
         "planned": 6,
-        "done": 4
+        "done": 5
       },
       {
         "week": "6/8",
