@@ -10,9 +10,9 @@
     "plannedThisWeek": 6,
     "completedThisWeek": 3,
     "currentStreak": 4,
-    "lastWorkout": "6/10 A1/A2恢復版｜趴姿Y-T-W各8×5、Reverse 12×5、Superman 12×5、側棒式各30秒×5、Hollow 20秒×5；117大卡。",
+    "lastWorkout": "6/10 A2恢復版｜趴姿Y-T-W各8×5、Reverse 12×5、Superman 12×5、側棒式各30秒×5、Hollow 20秒×5；117大卡。",
     "nextWorkout": "6/11 建議 C2 或低衝擊心肺/下肢輕量；若肩胛/核心痠，避免再堆上肢推，優先 Z2 快走與伸展。",
-    "readiness": "6/10 完成背部/肩胛與核心恢復型訓練，有流汗但不到很喘，117大卡；連續訓練第4天，明天留意肩胛、下背與核心疲勞。"
+    "readiness": "6/10 完成 A2 背部/肩胛與核心恢復型訓練，有流汗但不到很喘，117大卡；連續訓練第4天，明天留意肩胛、下背與核心疲勞。"
   },
   "calendar": [
     {
@@ -63,7 +63,7 @@
     {
       "date": "2026-06-10",
       "state": "done",
-      "label": "A1/A2恢復 ✓"
+      "label": "A2恢復 ✓"
     },
     {
       "date": "2026-06-11",
@@ -224,8 +224,8 @@
     },
     {
       "date": "2026-06-10",
-      "title": "A1｜Upper Back + Core Recovery",
-      "notes": "完成：趴姿 Y-T-W raise 各8下×5組、Reverse snow angel 12下×5組、Superman pull-down 12下×5組、側棒式各30秒×5組、Hollow hold 20秒×5組。感受：有流汗但不到很喘；手錶顯示消耗 117 大卡。判斷：今天實際比較像 A2 背部/核心恢復版，不是高推量 A1；在 6/8 A1 + 6/9 健身課後這樣安排合理，補到肩胛、背部與核心，避免再堆伏地挺身/肩推疲勞。"
+      "title": "A2｜Upper Back + Core Recovery",
+      "notes": "完成：趴姿 Y-T-W raise 各8下×5組、Reverse snow angel 12下×5組、Superman pull-down 12下×5組、側棒式各30秒×5組、Hollow hold 20秒×5組。感受：有流汗但不到很喘；手錶顯示消耗 117 大卡。判斷：今天是 A2 背部/核心恢復版；在 6/8 A1 + 6/9 健身課後這樣安排合理，補到肩胛、背部與核心，避免再堆伏地挺身/肩推疲勞。"
     }
   ],
   "progress": {
