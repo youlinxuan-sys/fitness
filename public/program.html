@@ -129,19 +129,40 @@ function setupWorkoutMode(data){
   render();
 }
 
-function dynamicCalendar(){
+function dynamicCalendar(calendarData){
   const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth();
+  const items=(calendarData&&calendarData.length)?calendarData:[];
+  const todayIso = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+  const todayItem = items.find(x=>x.date===todayIso) || items.find(x=>x.state==='today');
+  const lastDone = [...items].reverse().find(x=>x.state==='done');
+  const baseIso = todayItem?.date || lastDone?.date || items[0]?.date;
+  const baseDate = baseIso ? new Date(baseIso+'T00:00:00') : now;
+  const year = baseDate.getFullYear();
+  const month = baseDate.getMonth();
   const monthName = `${year}-${String(month+1).padStart(2,'0')}`;
   const el=document.getElementById('calendar');
   el.innerHTML='';
   const title=document.querySelector('.section-title h2');
   if(title) title.textContent=`${monthName} 訓練月曆`;
+  const stateText={planned:'預定',today:'今日',done:'完成',rest:'恢復',missed:'略過'};
   ['一','二','三','四','五','六','日'].forEach(d=>el.insertAdjacentHTML('beforeend',`<div class="dow">${d}</div>`));
   const first=new Date(year,month,1); const offset=(first.getDay()+6)%7;
-  const days=new Date(year,month+1,0).getDate();
   for(let i=0;i<offset;i++) el.insertAdjacentHTML('beforeend','<div></div>');
+  if(items.length){
+    const monthItems=items.filter(item=>{
+      const dt=new Date(item.date+'T00:00:00');
+      return dt.getFullYear()===year && dt.getMonth()===month;
+    });
+    const displayLabel = item => item.actual_label || item.planned_label || item.label || '—';
+    monthItems.forEach(item=>{
+      const dt=new Date(item.date+'T00:00:00');
+      const isToday=dt.toDateString()===now.toDateString();
+      const state=item.state||'planned'; const label=displayLabel(item);
+      el.insertAdjacentHTML('beforeend',`<div class="day ${state}" ${isToday?'style="outline:2px solid rgba(20,184,166,.65)"':''}><div class="num">${dt.getDate()}</div><div class="tag">${stateText[state]||state} · ${label}</div></div>`)
+    });
+    return;
+  }
+  const days=new Date(year,month+1,0).getDate();
   for(let d=1; d<=days; d++){
     const dt=new Date(year,month,d); const dow=dt.getDay();
     const weekOfMonth=Math.floor((d+offset-1)/7)+1;
@@ -171,7 +192,7 @@ fetch('./data.json').then(r=>r.json()).then(data=>{
   setupWorkoutMode(data);
   const pct=data.summary.plannedThisWeek?Math.round(data.summary.completedThisWeek/data.summary.plannedThisWeek*100):0;
   document.getElementById('completionHint').textContent=`${pct}% completion`;
-  dynamicCalendar();
+  dynamicCalendar(data.calendar);
   chart('completionChart',data.progress.weeklyCompletion.map(x=>x.week),[
     {label:'預計',data:data.progress.weeklyCompletion.map(x=>x.planned),backgroundColor:'rgba(204,251,241,.75)',borderColor:'rgba(15,118,110,.28)',borderWidth:1},
     {label:'完成',data:data.progress.weeklyCompletion.map(x=>x.done),backgroundColor:'rgba(20,184,166,.72)',borderColor:'#14B8A6',borderWidth:1}

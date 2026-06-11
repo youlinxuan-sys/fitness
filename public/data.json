@@ -18,152 +18,160 @@
     {
       "date": "2026-06-01",
       "state": "done",
-      "label": "A1 ✓"
+      "planned_label": "A1",
+      "actual_label": "A1 ✓"
     },
     {
       "date": "2026-06-02",
       "state": "done",
-      "label": "A2 ✓"
+      "planned_label": "C1",
+      "actual_label": "A2 ✓"
     },
     {
       "date": "2026-06-03",
       "state": "done",
-      "label": "C1 ✓"
+      "planned_label": "A2",
+      "actual_label": "C1 ✓"
     },
     {
       "date": "2026-06-04",
       "state": "done",
-      "label": "C1 ✓"
+      "planned_label": "C2",
+      "actual_label": "C1 ✓"
     },
     {
       "date": "2026-06-05",
       "state": "rest",
-      "label": "休息"
+      "planned_label": "休息"
     },
     {
       "date": "2026-06-06",
       "state": "rest",
-      "label": "休息"
+      "planned_label": "休息"
     },
     {
       "date": "2026-06-07",
       "state": "done",
-      "label": "健身課 ✓"
+      "planned_label": "恢復",
+      "actual_label": "健身課 ✓"
     },
     {
       "date": "2026-06-08",
       "state": "done",
-      "label": "A1 ✓"
+      "planned_label": "B1",
+      "actual_label": "A1 ✓"
     },
     {
       "date": "2026-06-09",
       "state": "done",
-      "label": "健身課 ✓"
+      "planned_label": "C1",
+      "actual_label": "健身課 ✓"
     },
     {
       "date": "2026-06-10",
       "state": "done",
-      "label": "A2恢復 ✓"
+      "planned_label": "B2",
+      "actual_label": "A2恢復 ✓"
     },
     {
       "date": "2026-06-11",
       "state": "planned",
-      "label": "C2"
+      "planned_label": "C2"
     },
     {
       "date": "2026-06-12",
       "state": "planned",
-      "label": "A3"
+      "planned_label": "A3"
     },
     {
       "date": "2026-06-13",
       "state": "planned",
-      "label": "Z2"
+      "planned_label": "Z2"
     },
     {
       "date": "2026-06-14",
       "state": "rest",
-      "label": "恢復"
+      "planned_label": "恢復"
     },
     {
       "date": "2026-06-15",
       "state": "planned",
-      "label": "A1"
+      "planned_label": "A1"
     },
     {
       "date": "2026-06-16",
       "state": "planned",
-      "label": "C1"
+      "planned_label": "C1"
     },
     {
       "date": "2026-06-17",
       "state": "planned",
-      "label": "A2"
+      "planned_label": "A2"
     },
     {
       "date": "2026-06-18",
       "state": "planned",
-      "label": "C2"
+      "planned_label": "C2"
     },
     {
       "date": "2026-06-19",
       "state": "planned",
-      "label": "A3"
+      "planned_label": "A3"
     },
     {
       "date": "2026-06-20",
       "state": "planned",
-      "label": "Z2"
+      "planned_label": "Z2"
     },
     {
       "date": "2026-06-21",
       "state": "rest",
-      "label": "恢復"
+      "planned_label": "恢復"
     },
     {
       "date": "2026-06-22",
       "state": "planned",
-      "label": "A1"
+      "planned_label": "B1"
     },
     {
       "date": "2026-06-23",
       "state": "planned",
-      "label": "C1"
+      "planned_label": "C1"
     },
     {
       "date": "2026-06-24",
       "state": "planned",
-      "label": "A2"
+      "planned_label": "B2"
     },
     {
       "date": "2026-06-25",
       "state": "planned",
-      "label": "C2"
+      "planned_label": "C2"
     },
     {
       "date": "2026-06-26",
       "state": "planned",
-      "label": "A3"
+      "planned_label": "B3"
     },
     {
       "date": "2026-06-27",
       "state": "planned",
-      "label": "Z2"
+      "planned_label": "Z2"
     },
     {
       "date": "2026-06-28",
       "state": "rest",
-      "label": "恢復"
+      "planned_label": "恢復"
     },
     {
       "date": "2026-06-29",
       "state": "planned",
-      "label": "A1"
+      "planned_label": "A1"
     },
     {
       "date": "2026-06-30",
       "state": "planned",
-      "label": "C1"
+      "planned_label": "C1"
     }
   ],
   "logs": [
