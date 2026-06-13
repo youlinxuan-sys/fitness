@@ -8,11 +8,11 @@
   },
   "summary": {
     "plannedThisWeek": 6,
-    "completedThisWeek": 3,
-    "currentStreak": 4,
-    "lastWorkout": "6/10 A2恢復版｜趴姿Y-T-W各8×5、Reverse 12×5、Superman 12×5、側棒式各30秒×5、Hollow 20秒×5；117大卡。",
-    "nextWorkout": "6/11 建議 C2 或低衝擊心肺/下肢輕量；若肩胛/核心痠，避免再堆上肢推，優先 Z2 快走與伸展。",
-    "readiness": "6/10 完成 A2 背部/肩胛與核心恢復型訓練，有流汗但不到很喘，117大卡；連續訓練第4天，明天留意肩胛、下背與核心疲勞。"
+    "completedThisWeek": 4,
+    "currentStreak": 1,
+    "lastWorkout": "6/12 健身課拉力/旋轉｜引體2×3、反式划船撐30秒×3、地雷管抓舉5kg 5×3、爆發轉體10kg 5×3、單手划船11kg 15×3、Cable抗旋轉13.5kg；快走20分 HR約130。",
+    "nextWorkout": "6/13 建議 Z2 快走/腳踏車 20–30分鐘＋伸展；若腰背/前臂痠，避免再做爆發轉體與高量拉。",
+    "readiness": "6/12 完成拉力＋旋轉/抗旋轉核心＋低中強度快走；今天訓練有效但腰背、前臂與肩胛可能累積，隔天以恢復心肺與活動度優先。"
   },
   "calendar": [
     {
@@ -80,13 +80,14 @@
     },
     {
       "date": "2026-06-12",
-      "state": "planned",
-      "planned_label": "A3"
+      "state": "done",
+      "planned_label": "A3",
+      "actual_label": "健身課拉力/旋轉 ✓"
     },
     {
       "date": "2026-06-13",
       "state": "planned",
-      "planned_label": "Z2"
+      "planned_label": "Z2 / 恢復"
     },
     {
       "date": "2026-06-14",
@@ -234,6 +235,11 @@
       "date": "2026-06-10",
       "title": "A2｜Upper Back + Core Recovery",
       "notes": "完成：趴姿 Y-T-W raise 各8下×5組、Reverse snow angel 12下×5組、Superman pull-down 12下×5組、側棒式各30秒×5組、Hollow hold 20秒×5組。感受：有流汗但不到很喘；手錶顯示消耗 117 大卡。判斷：今天是 A2 背部/核心恢復版；在 6/8 A1 + 6/9 健身課後這樣安排合理，補到肩胛、背部與核心，避免再堆伏地挺身/肩推疲勞。"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "Gym Class｜Pull + Landmine Power + Anti-Rotation",
+      "notes": "完成：自身體重引體向上 2下×3組、水平反式划船撐30秒不動×3組、地雷管抓舉 5kg 5下×3組、地雷管爆發轉體 10kg 5下×3組、機械坐姿單手划船 11kg 15下×3組、Cable 抗旋轉 13.5kg 10秒×2輪×3組；快走20分鐘，心率約130。判斷：今天主軸是拉力、肩胛穩定、爆發旋轉與抗旋轉核心；引體 2/2/2 可作為目前拉力基準，下次目標 3/2/2 或 2/2/3。隔天留意腰背與前臂疲勞，若爆發轉體造成腰背痠，先降速度或重量。"
     }
   ],
   "progress": {
