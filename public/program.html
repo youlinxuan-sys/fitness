@@ -52,7 +52,7 @@
 
     <section class="grid kpis">
       <div class="card kpi"><div class="label">本週完成</div><div class="value"><span id="done">0</span><small>/<span id="planned">0</span></small></div><div class="hint" id="completionHint">等待六月開始</div></div>
-      <div class="card kpi"><div class="label">連續紀錄</div><div class="value" id="streak">0</div><div class="hint">天 streak</div></div>
+      <div class="card kpi"><div class="label">本週進度</div><div class="value" id="weeklyProgress">0%</div><div class="hint" id="weeklyProgressHint">每週重置</div></div>
       <div class="card kpi"><div class="label">上次訓練</div><div class="value" style="font-size:28px" id="lastWorkout">尚未開始</div><div class="hint">運動後丟一句給我即可</div></div>
       <div class="card kpi"><div class="label">身體狀態</div><div class="value" style="font-size:28px" id="readiness">待回報</div><div class="hint">精神 / 睡眠 / 痠痛</div></div>
     </section>
@@ -186,11 +186,12 @@ fetch('./data.json').then(r=>r.json()).then(data=>{
   document.getElementById('phase').textContent=`${data.profile.phase} · ${data.profile.goal}`;
   document.getElementById('done').textContent=data.summary.completedThisWeek;
   document.getElementById('planned').textContent=data.summary.plannedThisWeek;
-  document.getElementById('streak').textContent=data.summary.currentStreak;
+  const pct=data.summary.plannedThisWeek?Math.round(data.summary.completedThisWeek/data.summary.plannedThisWeek*100):0;
+  document.getElementById('weeklyProgress').textContent=`${pct}%`;
+  document.getElementById('weeklyProgressHint').textContent=`本週 ${data.summary.completedThisWeek}/${data.summary.plannedThisWeek}，每週重置`;
   document.getElementById('lastWorkout').textContent=data.summary.lastWorkout;
   document.getElementById('readiness').textContent=data.summary.readiness;
   setupWorkoutMode(data);
-  const pct=data.summary.plannedThisWeek?Math.round(data.summary.completedThisWeek/data.summary.plannedThisWeek*100):0;
   document.getElementById('completionHint').textContent=`${pct}% completion`;
   dynamicCalendar(data.calendar);
   chart('completionChart',data.progress.weeklyCompletion.map(x=>x.week),[
