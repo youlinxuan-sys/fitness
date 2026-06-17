@@ -36,7 +36,7 @@
     .legend{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}.legend span{font-size:12px; color:var(--muted); display:flex; gap:6px; align-items:center}.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
     canvas{max-height:260px}.program-day{padding:14px;border-radius:16px;background:var(--off-white);border:1px solid var(--line);margin-top:10px}.footer{margin-top:20px;color:var(--slate-400);font-size:12px;text-align:center}
 
-    .workout-select{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:16px}.workout-select select{width:100%;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:16px;padding:13px 14px;font-size:16px;font-weight:800;outline:none}.workout-select button{border:0;background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff;border-radius:16px;padding:0 16px;font-weight:900;cursor:pointer}.today-workout{display:grid;gap:12px}.today-head{padding:16px;border-radius:18px;background:linear-gradient(135deg,var(--teal-50),#fff);border:1px solid var(--line)}.today-title{font-size:30px;font-weight:950;letter-spacing:-.045em}.today-meta{color:var(--muted);margin-top:6px}.warmup-list{display:flex;flex-wrap:wrap;gap:8px}.warmup-chip{font-size:12px;font-weight:800;color:#92400E;background:#FFFBEB;border:1px solid rgba(217,119,6,.18);border-radius:999px;padding:7px 10px}.exercise-list{display:grid;gap:10px}.exercise-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border:1px solid var(--line);background:var(--off-white);border-radius:18px}.exercise-name{font-weight:900;line-height:1.35}.exercise-note{color:var(--muted);font-size:12px;line-height:1.45;margin-top:6px}.rx{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}.rx span{font-size:12px;font-weight:900;border-radius:999px;padding:7px 10px;background:var(--teal-50);border:1px solid rgba(20,184,166,.22)}.rx .rest-chip{background:#F0F9FF;border-color:rgba(14,165,233,.24)}
+    .workout-select{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:10px}.workout-select select{width:100%;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:16px;padding:13px 14px;font-size:16px;font-weight:800;outline:none}.workout-select button{border:0;background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff;border-radius:16px;padding:0 16px;font-weight:900;cursor:pointer}.quick-picks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.quick-pick{border:1px solid rgba(20,184,166,.24);background:#fff;color:var(--teal-900);border-radius:999px;padding:8px 11px;font-size:12px;font-weight:900;cursor:pointer}.quick-pick.recovery{background:#FFFBEB;border-color:rgba(217,119,6,.26);color:#92400E}.today-workout{display:grid;gap:12px}.today-head{padding:16px;border-radius:18px;background:linear-gradient(135deg,var(--teal-50),#fff);border:1px solid var(--line)}.today-head.recovery{background:linear-gradient(135deg,#FFFBEB,#fff);border-color:rgba(217,119,6,.22)}.today-title{font-size:30px;font-weight:950;letter-spacing:-.045em}.today-meta{color:var(--muted);margin-top:6px}.warmup-list{display:flex;flex-wrap:wrap;gap:8px}.warmup-chip{font-size:12px;font-weight:800;color:#92400E;background:#FFFBEB;border:1px solid rgba(217,119,6,.18);border-radius:999px;padding:7px 10px}.exercise-list{display:grid;gap:10px}.exercise-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border:1px solid var(--line);background:var(--off-white);border-radius:18px}.exercise-row.recovery{background:#FFFBEB;border-color:rgba(217,119,6,.18)}.exercise-name{font-weight:900;line-height:1.35}.exercise-note{color:var(--muted);font-size:12px;line-height:1.45;margin-top:6px}.rx{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}.rx span{font-size:12px;font-weight:900;border-radius:999px;padding:7px 10px;background:var(--teal-50);border:1px solid rgba(20,184,166,.22)}.rx .rest-chip{background:#F0F9FF;border-color:rgba(14,165,233,.24)}
     @media(max-width:900px){.kpis,.main,.bottom,.workout-select,.exercise-row{grid-template-columns:1fr} header{display:block}.top-actions{align-items:flex-start;margin-top:16px}.pill{display:inline-block;text-align:left;max-width:100%}.wrap{width:min(100vw - 20px,1220px);padding-top:22px}.card{padding:14px}.calendar{gap:4px}.dow{font-size:10px}.day{min-height:52px;padding:5px;border-radius:10px}.day .num{font-size:12px}.day .tag{font-size:9px;line-height:1.15;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
   </style>
 </head>
@@ -70,6 +70,7 @@
           <select id="workoutPicker" aria-label="選擇今天菜單"></select>
           <button id="setTodayBtn">設為今天</button>
         </div>
+        <div class="quick-picks" id="quickPicks" aria-label="快速選擇菜單"></div>
         <div class="today-workout" id="todayWorkout"></div>
         <div class="template">做完回報範例：
 今天做 A1。慢速深蹲 5輪、伏地挺身 12/10/10/8/8、分腿蹲完成。快走 35 分鐘，心率 132–144。感覺 7/10。</div>
@@ -107,19 +108,25 @@ function setupWorkoutMode(data){
   const picker=document.getElementById('workoutPicker');
   const saved=localStorage.getItem('fitness.selectedWorkout') || data.selectedWorkout || 'A1';
   const keys=Object.keys(data.programs||{});
-  picker.innerHTML=keys.map(k=>`<option value="${k}">${data.programs[k].title}</option>`).join('');
+  const isRecoveryKey=k=>/MOB|STRETCH|恢復|伸展|Recovery/i.test(`${k} ${data.programs[k]?.title||''} ${data.programs[k]?.week||''}`);
+  picker.innerHTML=keys.map(k=>`<option value="${k}">${isRecoveryKey(k)?'🧘 ':''}${data.programs[k].title}</option>`).join('');
   picker.value=data.programs[saved]?saved:keys[0];
+  const quick=document.getElementById('quickPicks');
+  const recoveryKeys=keys.filter(isRecoveryKey);
+  quick.innerHTML=[...recoveryKeys, 'A2', 'Z2'].filter((k,i,a)=>data.programs[k] && a.indexOf(k)===i).map(k=>`<button class="quick-pick ${isRecoveryKey(k)?'recovery':''}" data-key="${k}">${isRecoveryKey(k)?'伸展｜':''}${data.programs[k].title.split('｜')[0]}</button>`).join('');
+  quick.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{picker.value=btn.dataset.key; render();}));
   const render=()=>{
     const key=picker.value; localStorage.setItem('fitness.selectedWorkout',key);
     const w=data.programs[key];
+    const recovery=isRecoveryKey(key);
     document.getElementById('todayWorkout').innerHTML=`
-      <div class="today-head">
+      <div class="today-head ${recovery?'recovery':''}">
         <div class="today-title">${w.title}</div>
         <div class="today-meta">${w.week} · ${w.focus}</div>
       </div>
       <div class="warmup-list">${w.warmup.map(x=>`<span class="warmup-chip">${x}</span>`).join('')}</div>
       <div class="exercise-list">
-        ${w.exercises.map((e,i)=>`<div class="exercise-row">
+        ${w.exercises.map((e,i)=>`<div class="exercise-row ${recovery?'recovery':''}">
           <div><div class="exercise-name">${i+1}. ${e.name}</div><div class="exercise-note">替代：${e.alt||'—'}${e.note?`｜${e.note}`:''}</div></div>
           <div class="rx"><span>${e.prescription}</span><span class="rest-chip">休 ${e.rest}</span></div>
         </div>`).join('')}
