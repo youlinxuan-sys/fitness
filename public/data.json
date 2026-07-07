@@ -8,8 +8,8 @@
   },
   "summary": {
     "plannedThisWeek": 6,
-    "completedThisWeek": 1,
-    "currentStreak": 1,
+    "completedThisWeek": 0,
+    "currentStreak": 0,
     "lastWorkout": "6/23 健身課力量｜抱槓深蹲 70kg 5×3、坐姿肩推 30kg 10×3、地雷管弓箭步肩推 7.5kg 各5×3、窄握推 40kg 8×3；快走 20 分鐘，平均心率 136。",
     "nextWorkout": "6/24 原訂 B2；若肩膀/三頭或股四頭痠，改背部肩胛＋核心恢復版，或低強度快走 20–30 分鐘。",
     "readiness": "6/23 是中高強度力量日，推類與深蹲負荷都高；隔天優先檢查肩肘、三頭、核心與腿部疲勞，不建議再堆重推或重蹲。"
@@ -181,6 +181,161 @@
       "date": "2026-06-30",
       "state": "planned",
       "planned_label": "C1"
+    },
+    {
+      "date": "2026-07-01",
+      "state": "planned",
+      "planned_label": "A2"
+    },
+    {
+      "date": "2026-07-02",
+      "state": "planned",
+      "planned_label": "C2"
+    },
+    {
+      "date": "2026-07-03",
+      "state": "planned",
+      "planned_label": "A3"
+    },
+    {
+      "date": "2026-07-04",
+      "state": "planned",
+      "planned_label": "Z2"
+    },
+    {
+      "date": "2026-07-05",
+      "state": "rest",
+      "planned_label": "恢復"
+    },
+    {
+      "date": "2026-07-06",
+      "state": "planned",
+      "planned_label": "B1"
+    },
+    {
+      "date": "2026-07-07",
+      "state": "planned",
+      "planned_label": "C1"
+    },
+    {
+      "date": "2026-07-08",
+      "state": "planned",
+      "planned_label": "B2"
+    },
+    {
+      "date": "2026-07-09",
+      "state": "planned",
+      "planned_label": "C2"
+    },
+    {
+      "date": "2026-07-10",
+      "state": "planned",
+      "planned_label": "B3"
+    },
+    {
+      "date": "2026-07-11",
+      "state": "planned",
+      "planned_label": "Z2"
+    },
+    {
+      "date": "2026-07-12",
+      "state": "rest",
+      "planned_label": "恢復"
+    },
+    {
+      "date": "2026-07-13",
+      "state": "planned",
+      "planned_label": "A1"
+    },
+    {
+      "date": "2026-07-14",
+      "state": "planned",
+      "planned_label": "C1"
+    },
+    {
+      "date": "2026-07-15",
+      "state": "planned",
+      "planned_label": "A2"
+    },
+    {
+      "date": "2026-07-16",
+      "state": "planned",
+      "planned_label": "C2"
+    },
+    {
+      "date": "2026-07-17",
+      "state": "planned",
+      "planned_label": "A3"
+    },
+    {
+      "date": "2026-07-18",
+      "state": "planned",
+      "planned_label": "Z2"
+    },
+    {
+      "date": "2026-07-19",
+      "state": "rest",
+      "planned_label": "恢復"
+    },
+    {
+      "date": "2026-07-20",
+      "state": "planned",
+      "planned_label": "B1"
+    },
+    {
+      "date": "2026-07-21",
+      "state": "planned",
+      "planned_label": "C1"
+    },
+    {
+      "date": "2026-07-22",
+      "state": "planned",
+      "planned_label": "B2"
+    },
+    {
+      "date": "2026-07-23",
+      "state": "planned",
+      "planned_label": "C2"
+    },
+    {
+      "date": "2026-07-24",
+      "state": "planned",
+      "planned_label": "B3"
+    },
+    {
+      "date": "2026-07-25",
+      "state": "planned",
+      "planned_label": "Z2"
+    },
+    {
+      "date": "2026-07-26",
+      "state": "rest",
+      "planned_label": "恢復"
+    },
+    {
+      "date": "2026-07-27",
+      "state": "planned",
+      "planned_label": "A1"
+    },
+    {
+      "date": "2026-07-28",
+      "state": "planned",
+      "planned_label": "C1"
+    },
+    {
+      "date": "2026-07-29",
+      "state": "planned",
+      "planned_label": "A2"
+    },
+    {
+      "date": "2026-07-30",
+      "state": "planned",
+      "planned_label": "C2"
+    },
+    {
+      "date": "2026-07-31",
+      "state": "planned",
+      "planned_label": "A3"
     }
   ],
   "logs": [
@@ -314,7 +469,12 @@
       },
       {
         "week": "6/29",
-        "planned": 2,
+        "planned": 6,
+        "done": 0
+      },
+      {
+        "week": "7/6",
+        "planned": 6,
         "done": 0
       }
     ],
@@ -337,6 +497,10 @@
       },
       {
         "week": "6/29",
+        "minutes": 0
+      },
+      {
+        "week": "7/6",
         "minutes": 0
       }
     ]
