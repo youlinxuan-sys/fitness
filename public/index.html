@@ -28,16 +28,17 @@
     .card{border:1px solid var(--line); border-left:5px solid var(--teal-500); background:linear-gradient(180deg,var(--card),var(--card2)); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); position:relative; overflow:hidden;}
     .card:after{content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(20,184,166,.06),transparent 40%); pointer-events:none}.card>*{position:relative; z-index:1}
     .kpi .label{color:var(--muted); font-size:13px; font-weight:700}.kpi .value{font-size:42px; line-height:1; font-weight:900; letter-spacing:-.05em; margin-top:12px}.kpi .hint{color:var(--teal-700); font-size:13px; margin-top:10px}.kpi small{font-size:18px; color:var(--muted)}
+    .kpi .progress-track{height:9px;border-radius:999px;background:rgba(20,184,166,.14);overflow:hidden;margin-top:14px}.kpi .progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal-500),var(--teal-700));border-radius:inherit}.kpi-text .value{font-size:26px!important;line-height:1.14;letter-spacing:-.035em}.kpi-detail{color:var(--muted);font-size:14px;font-weight:400;line-height:1.55;margin-top:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.kpi-more{margin-top:8px}.kpi-more summary{cursor:pointer;color:var(--teal-700);font-size:13px;font-weight:900;list-style:none}.kpi-more summary::-webkit-details-marker{display:none}.kpi-more[open] .kpi-detail{display:block;overflow:visible}.kpi-more[open] summary{margin-bottom:6px}
     .section-title{display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:16px} h2{margin:0; font-size:20px; letter-spacing:-.02em}.muted{color:var(--muted)}
-    .calendar{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:8px; width:100%; overflow:hidden}.dow{font-size:12px; color:var(--muted); text-align:center; font-weight:800; min-width:0}.day{min-height:78px; min-width:0; overflow:hidden; border:1px solid rgba(15,118,110,.14); background:var(--off-white); border-radius:16px; padding:10px; display:flex; flex-direction:column; justify-content:space-between}.day .num{font-weight:900}.day .tag{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}.planned{border-color:rgba(20,184,166,.38); background:var(--teal-50)}.done{border-color:rgba(22,163,74,.32); background:#F0FDF4}.rest{border-color:rgba(14,165,233,.24); background:#F0F9FF}.missed{border-color:rgba(190,18,60,.26); background:#FFF1F2}.today{border-color:rgba(217,119,6,.48); background:#FFFBEB; outline:2px solid rgba(217,119,6,.45)}
+    .calendar{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:8px; width:100%; overflow:hidden}.dow{font-size:12px; color:var(--muted); text-align:center; font-weight:800; min-width:0}.day{min-height:78px; min-width:0; overflow:hidden; border:1px solid rgba(15,118,110,.14); background:var(--off-white); border-radius:16px; padding:10px; display:flex; flex-direction:column; justify-content:space-between}.day .num{font-weight:900}.day .state-label{font-size:11px;color:var(--slate-400);font-weight:800}.day .tag{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}.planned{border-color:rgba(20,184,166,.38); background:var(--teal-50)}.done{border-color:rgba(22,163,74,.32); background:#F0FDF4}.rest{border-color:rgba(14,165,233,.24); background:#F0F9FF}.missed{border-color:rgba(190,18,60,.26); background:#FFF1F2}.today{border-color:rgba(217,119,6,.48); background:#FFFBEB; outline:2px solid rgba(217,119,6,.45)}
     .next{display:grid; gap:12px}.big-next{font-size:28px; font-weight:900; letter-spacing:-.04em}.checklist{display:grid; gap:10px}.check{display:flex; align-items:center; gap:10px; color:var(--soft); padding:12px; border-radius:16px; background:var(--teal-50); border:1px solid var(--line)}.dot{width:10px;height:10px;border-radius:99px;background:var(--teal); box-shadow:0 0 18px rgba(20,184,166,.35)}
     .log-empty{padding:20px; border:1px dashed rgba(20,184,166,.35); border-radius:18px; color:var(--muted); line-height:1.8; background:var(--teal-50)}
     .template{font-family:"SFMono-Regular",Consolas,monospace; font-size:13px; line-height:1.7; color:var(--slate-800); background:var(--teal-50); border:1px solid var(--line); border-radius:18px; padding:16px; white-space:pre-wrap;}
     .legend{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}.legend span{font-size:12px; color:var(--muted); display:flex; gap:6px; align-items:center}.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
-    canvas{max-height:260px}.program-day{padding:14px;border-radius:16px;background:var(--off-white);border:1px solid var(--line);margin-top:10px}.footer{margin-top:20px;color:var(--slate-400);font-size:12px;text-align:center}
+    canvas{max-height:260px}.program-day{padding:14px;border-radius:16px;background:var(--off-white);border:1px solid var(--line);margin-top:10px}.program-day summary{cursor:pointer;font-weight:900;line-height:1.45}.program-day summary::marker{color:var(--teal-700)}.program-day .muted{margin-top:8px;line-height:1.65}.show-more{width:100%;min-height:44px;margin-top:12px;border:1px solid rgba(20,184,166,.24);background:#fff;color:var(--teal-900);border-radius:16px;font-weight:900;cursor:pointer}.footer{margin-top:20px;color:var(--slate-400);font-size:12px;text-align:center}
 
-    .workout-select{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:10px}.workout-select select{width:100%;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:16px;padding:13px 14px;font-size:16px;font-weight:800;outline:none}.workout-select button{border:0;background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff;border-radius:16px;padding:0 16px;font-weight:900;cursor:pointer}.quick-picks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.quick-pick{border:1px solid rgba(20,184,166,.24);background:#fff;color:var(--teal-900);border-radius:999px;padding:8px 11px;font-size:12px;font-weight:900;cursor:pointer}.quick-pick.recovery{background:#FFFBEB;border-color:rgba(217,119,6,.26);color:#92400E}.today-workout{display:grid;gap:12px}.today-head{padding:16px;border-radius:18px;background:linear-gradient(135deg,var(--teal-50),#fff);border:1px solid var(--line)}.today-head.recovery{background:linear-gradient(135deg,#FFFBEB,#fff);border-color:rgba(217,119,6,.22)}.today-title{font-size:30px;font-weight:950;letter-spacing:-.045em}.today-meta{color:var(--muted);margin-top:6px}.warmup-list{display:flex;flex-wrap:wrap;gap:8px}.warmup-chip{font-size:12px;font-weight:800;color:#92400E;background:#FFFBEB;border:1px solid rgba(217,119,6,.18);border-radius:999px;padding:7px 10px}.exercise-list{display:grid;gap:10px}.exercise-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border:1px solid var(--line);background:var(--off-white);border-radius:18px}.exercise-row.recovery{background:#FFFBEB;border-color:rgba(217,119,6,.18)}.exercise-name{font-weight:900;line-height:1.35}.exercise-note{color:var(--muted);font-size:12px;line-height:1.45;margin-top:6px}.rx{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}.rx span{font-size:12px;font-weight:900;border-radius:999px;padding:7px 10px;background:var(--teal-50);border:1px solid rgba(20,184,166,.22)}.rx .rest-chip{background:#F0F9FF;border-color:rgba(14,165,233,.24)}
-    @media(max-width:900px){.kpis,.main,.bottom,.workout-select,.exercise-row{grid-template-columns:1fr} header{display:block}.top-actions{align-items:flex-start;margin-top:16px}.pill{display:inline-block;text-align:left;max-width:100%}.wrap{width:min(100vw - 20px,1220px);padding-top:22px}.card{padding:14px}.calendar{gap:4px}.dow{font-size:10px}.day{min-height:52px;padding:5px;border-radius:10px}.day .num{font-size:12px}.day .tag{font-size:9px;line-height:1.15;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+    .workout-select{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:10px}.workout-select select{width:100%;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:16px;padding:13px 14px;font-size:16px;font-weight:800;outline:none}.quick-picks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.quick-pick{min-height:44px;border:1px solid rgba(20,184,166,.24);background:#fff;color:var(--teal-900);border-radius:999px;padding:10px 14px;font-size:12px;font-weight:900;cursor:pointer}.quick-pick.recovery{background:#FFFBEB;border-color:rgba(217,119,6,.26);color:#92400E}.today-workout{display:grid;gap:12px}.today-head{padding:16px;border-radius:18px;background:linear-gradient(135deg,var(--teal-50),#fff);border:1px solid var(--line)}.today-head.recovery{background:linear-gradient(135deg,#FFFBEB,#fff);border-color:rgba(217,119,6,.22)}.today-title{font-size:30px;font-weight:950;letter-spacing:-.045em}.today-meta{color:var(--muted);margin-top:6px}.warmup-list{display:flex;flex-wrap:wrap;gap:8px}.warmup-chip{font-size:12px;font-weight:800;color:#92400E;background:#FFFBEB;border:1px solid rgba(217,119,6,.18);border-radius:999px;padding:7px 10px}.exercise-list{display:grid;gap:10px}.exercise-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border:1px solid var(--line);background:var(--off-white);border-radius:18px}.exercise-row.recovery{background:#FFFBEB;border-color:rgba(217,119,6,.18)}.exercise-name{font-weight:900;line-height:1.35}.exercise-note{color:var(--muted);font-size:12px;line-height:1.45;margin-top:6px}.rx{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}.rx span{font-size:12px;font-weight:900;border-radius:999px;padding:7px 10px;background:var(--teal-50);border:1px solid rgba(20,184,166,.22)}.rx .rest-chip{background:#F0F9FF;border-color:rgba(14,165,233,.24)}
+    @media(max-width:900px){.main,.bottom,.workout-select,.exercise-row{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.main .next{order:-1} header{display:block}.top-actions{align-items:flex-start;margin-top:16px}.pill{display:inline-block;text-align:left;max-width:100%}.wrap{width:min(100vw - 20px,1220px);padding-top:22px}.card{padding:14px}.kpi .value{font-size:34px}.kpi-text .value{font-size:20px!important}.kpi-detail{font-size:13px;-webkit-line-clamp:2}.calendar{gap:4px}.dow{font-size:10px}.day{min-height:58px;padding:6px;border-radius:10px}.day .num{font-size:12px}.day .state-label{display:none}.day .tag{font-size:12px;line-height:1.18;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.legend span{font-size:11px}.today-title{font-size:25px}.quick-pick{flex:1 1 auto}}
   </style>
 </head>
 <body>
@@ -52,10 +53,10 @@
     </header>
 
     <section class="grid kpis">
-      <div class="card kpi"><div class="label">本週完成</div><div class="value"><span id="done">0</span><small>/<span id="planned">0</span></small></div><div class="hint" id="completionHint">等待六月開始</div></div>
-      <div class="card kpi"><div class="label">本週進度</div><div class="value" id="weeklyProgress">0%</div><div class="hint" id="weeklyProgressHint">每週重置</div></div>
-      <div class="card kpi"><div class="label">上次訓練</div><div class="value" style="font-size:28px" id="lastWorkout">尚未開始</div><div class="hint">運動後丟一句給我即可</div></div>
-      <div class="card kpi"><div class="label">身體狀態</div><div class="value" style="font-size:28px" id="readiness">待回報</div><div class="hint">精神 / 睡眠 / 痠痛</div></div>
+      <div class="card kpi"><div class="label">本週進度</div><div class="value"><span id="done">0</span><small>/<span id="planned">0</span></small></div><div class="progress-track" aria-hidden="true"><div class="progress-fill" id="weeklyProgressFill"></div></div><div class="hint" id="weeklyProgressHint">每週重置</div></div>
+      <div class="card kpi"><div class="label">本週剩餘</div><div class="value" id="remainingWorkouts">0</div><div class="hint">照身體狀態調整</div></div>
+      <div class="card kpi kpi-text"><div class="label">上次訓練</div><div class="value" id="lastWorkoutShort">尚未開始</div><div class="kpi-detail" id="lastWorkoutPreview"></div><details class="kpi-more" id="lastWorkoutMore"><summary>展開全文</summary><div class="kpi-detail" id="lastWorkoutDetail"></div></details><div class="hint">運動後丟一句給我即可</div></div>
+      <div class="card kpi kpi-text"><div class="label">身體狀態</div><div class="value" id="readinessShort">待回報</div><div class="kpi-detail" id="readinessPreview"></div><details class="kpi-more" id="readinessMore"><summary>展開全文</summary><div class="kpi-detail" id="readinessDetail"></div></details><div class="hint">精神 / 睡眠 / 痠痛</div></div>
     </section>
 
     <section class="grid main">
@@ -68,7 +69,6 @@
         <div class="section-title"><h2>今天照著練</h2><span class="muted">Workout mode</span></div>
         <div class="workout-select">
           <select id="workoutPicker" aria-label="選擇今天菜單"></select>
-          <button id="setTodayBtn">設為今天</button>
         </div>
         <div class="quick-picks" id="quickPicks" aria-label="快速選擇菜單"></div>
         <div class="today-workout" id="todayWorkout"></div>
@@ -104,16 +104,52 @@
 const stateClass={planned:'planned',done:'done',rest:'rest',missed:'missed'};
 const stateText={planned:'預計',done:'完成',rest:'休息',missed:'補'};
 
+function escapeHtml(value){
+  return String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+}
+
+function splitSummaryText(value){
+  const text=String(value || '').trim();
+  if(!text) return {short:'—', detail:''};
+  const match=text.match(/[｜；。，]/);
+  if(!match) return {short:text, detail:''};
+  const index=match.index;
+  const short=text.slice(0,index).trim();
+  const detail=text.slice(index+1).trim();
+  return {short:short || text, detail};
+}
+
+function setKpiText(prefix, value, explicitShort, explicitDetail){
+  const split=splitSummaryText(value);
+  const shortText=explicitShort || split.short;
+  const detailText=explicitDetail || split.detail;
+  document.getElementById(`${prefix}Short`).textContent=shortText;
+  const preview=document.getElementById(`${prefix}Preview`);
+  const detail=document.getElementById(`${prefix}Detail`);
+  const more=document.getElementById(`${prefix}More`);
+  if(detailText){
+    preview.textContent=detailText;
+    preview.hidden=false;
+    detail.textContent=detailText;
+    more.hidden=false;
+  }else{
+    preview.textContent='';
+    preview.hidden=true;
+    detail.textContent='';
+    more.hidden=true;
+  }
+}
+
 function setupWorkoutMode(data){
   const picker=document.getElementById('workoutPicker');
   const saved=localStorage.getItem('fitness.selectedWorkout') || data.selectedWorkout || 'A1';
   const keys=Object.keys(data.programs||{});
   const isRecoveryKey=k=>/MOB|STRETCH|恢復|伸展|Recovery/i.test(`${k} ${data.programs[k]?.title||''} ${data.programs[k]?.week||''}`);
-  picker.innerHTML=keys.map(k=>`<option value="${k}">${isRecoveryKey(k)?'🧘 ':''}${data.programs[k].title}</option>`).join('');
+  picker.innerHTML=keys.map(k=>`<option value="${escapeHtml(k)}">${isRecoveryKey(k)?'🧘 ':''}${escapeHtml(data.programs[k].title)}</option>`).join('');
   picker.value=data.programs[saved]?saved:keys[0];
   const quick=document.getElementById('quickPicks');
   const recoveryKeys=keys.filter(isRecoveryKey);
-  quick.innerHTML=[...recoveryKeys, 'A2', 'Z2'].filter((k,i,a)=>data.programs[k] && a.indexOf(k)===i).map(k=>`<button class="quick-pick ${isRecoveryKey(k)?'recovery':''}" data-key="${k}">${isRecoveryKey(k)?'伸展｜':''}${data.programs[k].title.split('｜')[0]}</button>`).join('');
+  quick.innerHTML=[...recoveryKeys, 'A2', 'Z2'].filter((k,i,a)=>data.programs[k] && a.indexOf(k)===i).map(k=>`<button class="quick-pick ${isRecoveryKey(k)?'recovery':''}" data-key="${escapeHtml(k)}">${isRecoveryKey(k)?'伸展｜':''}${escapeHtml(data.programs[k].title.split('｜')[0])}</button>`).join('');
   quick.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{picker.value=btn.dataset.key; render();}));
   const render=()=>{
     const key=picker.value; localStorage.setItem('fitness.selectedWorkout',key);
@@ -121,20 +157,28 @@ function setupWorkoutMode(data){
     const recovery=isRecoveryKey(key);
     document.getElementById('todayWorkout').innerHTML=`
       <div class="today-head ${recovery?'recovery':''}">
-        <div class="today-title">${w.title}</div>
-        <div class="today-meta">${w.week} · ${w.focus}</div>
+        <div class="today-title">${escapeHtml(w.title)}</div>
+        <div class="today-meta">${escapeHtml(w.week)} · ${escapeHtml(w.focus)}</div>
       </div>
-      <div class="warmup-list">${w.warmup.map(x=>`<span class="warmup-chip">${x}</span>`).join('')}</div>
+      <div class="warmup-list">${(w.warmup||[]).map(x=>`<span class="warmup-chip">${escapeHtml(x)}</span>`).join('')}</div>
       <div class="exercise-list">
-        ${w.exercises.map((e,i)=>`<div class="exercise-row ${recovery?'recovery':''}">
-          <div><div class="exercise-name">${i+1}. ${e.name}</div><div class="exercise-note">替代：${e.alt||'—'}${e.note?`｜${e.note}`:''}</div></div>
-          <div class="rx"><span>${e.prescription}</span><span class="rest-chip">休 ${e.rest}</span></div>
+        ${(w.exercises||[]).map((e,i)=>`<div class="exercise-row ${recovery?'recovery':''}">
+          <div><div class="exercise-name">${i+1}. ${escapeHtml(e.name)}</div><div class="exercise-note">替代：${escapeHtml(e.alt||'—')}${e.note?`｜${escapeHtml(e.note)}`:''}</div></div>
+          <div class="rx"><span>${escapeHtml(e.prescription)}</span><span class="rest-chip">休 ${escapeHtml(e.rest)}</span></div>
         </div>`).join('')}
       </div>`;
   };
   picker.addEventListener('change',render);
-  document.getElementById('setTodayBtn').addEventListener('click',render);
   render();
+}
+
+function compactCalendarLabel(label){
+  return String(label || '—')
+    .replace(/\s*✓\s*/g,'')
+    .replace(/^完成\s*·\s*/,'')
+    .replace(/健身課[^\s/]*/,'健身課')
+    .replace(/休息＋走路\d+分/,'休息')
+    .trim();
 }
 
 function dynamicCalendar(calendarData){
@@ -152,9 +196,9 @@ function dynamicCalendar(calendarData){
   el.innerHTML='';
   const title=document.querySelector('.section-title h2');
   if(title) title.textContent=`${monthName} 訓練月曆`;
-  const stateText={planned:'預定',today:'今日',done:'完成',rest:'恢復',missed:'略過'};
+  const localStateText={planned:'預定',today:'今日',done:'完成',rest:'恢復',missed:'略過'};
   ['一','二','三','四','五','六','日'].forEach(d=>el.insertAdjacentHTML('beforeend',`<div class="dow">${d}</div>`));
-  const displayLabel = item => item.actual_label || item.planned_label || item.label || '—';
+  const displayLabel = item => compactCalendarLabel(item.actual_label || item.planned_label || item.label || '—');
   if(items.length){
     const monthItems=items.filter(item=>{
       const dt=new Date(item.date+'T00:00:00');
@@ -166,7 +210,7 @@ function dynamicCalendar(calendarData){
       const dt=new Date(item.date+'T00:00:00');
       const isToday=dt.toDateString()===now.toDateString();
       const state=item.state||'planned'; const label=displayLabel(item);
-      el.insertAdjacentHTML('beforeend',`<div class="day ${state}" ${isToday?'style="outline:2px solid rgba(20,184,166,.65)"':''}><div class="num">${dt.getDate()}</div><div class="tag">${stateText[state]||state} · ${label}</div></div>`)
+      el.insertAdjacentHTML('beforeend',`<div class="day ${escapeHtml(state)} ${isToday?'today':''}"><div class="num">${dt.getDate()}</div><div><div class="state-label">${escapeHtml(localStateText[state]||state)}</div><div class="tag">${escapeHtml(label)}</div></div></div>`)
     });
     return;
   }
@@ -175,30 +219,54 @@ function dynamicCalendar(calendarData){
 function chart(id, labels, datasets){
   return new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets},options:{responsive:true,plugins:{legend:{labels:{color:'#475569'}}},scales:{x:{ticks:{color:'#64748B'},grid:{color:'rgba(15,118,110,.10)'}},y:{beginAtZero:true,ticks:{color:'#64748B',precision:0},grid:{color:'rgba(15,118,110,.10)'}}}}})
 }
+
+function renderLogs(logs){
+  const el=document.getElementById('logs');
+  if(!logs.length){
+    el.innerHTML='<div class="log-empty">還沒有紀錄。六月開始後，每次運動完丟一句話，我會幫你補進這裡。</div>';
+    return;
+  }
+  const sorted=[...logs].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  const renderItems=items=>items.map(l=>`<div class="program-day"><b>${escapeHtml(l.date)} · ${escapeHtml(l.title)}</b><div class="muted">${escapeHtml(l.notes||'')}</div></div>`).join('');
+  const initial=sorted.slice(0,5);
+  el.innerHTML=renderItems(initial) + (sorted.length>5 ? `<button class="show-more" id="showAllLogs">顯示全部（${sorted.length} 筆）</button>` : '');
+  const btn=document.getElementById('showAllLogs');
+  if(btn) btn.addEventListener('click',()=>{el.innerHTML=renderItems(sorted);});
+}
+
+function renderCoachProgram(coachProgram){
+  const program=document.getElementById('program');
+  const days=coachProgram?.days || [];
+  if(!days.length){
+    program.innerHTML=`<div class="log-empty">${escapeHtml(coachProgram?.notes || '')}</div>`;
+    return;
+  }
+  program.innerHTML=days.map((d,i)=>`<details class="program-day" ${i===0?'open':''}><summary>${escapeHtml(d.name)}</summary><div class="muted">${escapeHtml(d.notes||'')}</div></details>`).join('');
+}
+
 fetch('./data.json?ts='+Date.now(), {cache:'no-store'}).then(r=>{if(!r.ok) throw new Error('data '+r.status); return r.json()}).then(data=>{
   document.getElementById('phase').textContent=`${data.profile.phase} · ${data.profile.goal}`;
   document.getElementById('done').textContent=data.summary.completedThisWeek;
   document.getElementById('planned').textContent=data.summary.plannedThisWeek;
   const pct=data.summary.plannedThisWeek?Math.round(data.summary.completedThisWeek/data.summary.plannedThisWeek*100):0;
-  document.getElementById('weeklyProgress').textContent=`${pct}%`;
-  document.getElementById('weeklyProgressHint').textContent=`本週 ${data.summary.completedThisWeek}/${data.summary.plannedThisWeek}，每週重置`;
-  document.getElementById('lastWorkout').textContent=data.summary.lastWorkout;
-  document.getElementById('readiness').textContent=data.summary.readiness;
+  const remaining=Math.max((data.summary.plannedThisWeek||0)-(data.summary.completedThisWeek||0),0);
+  document.getElementById('remainingWorkouts').textContent=remaining;
+  document.getElementById('weeklyProgressFill').style.width=`${Math.min(Math.max(pct,0),100)}%`;
+  document.getElementById('weeklyProgressHint').textContent=`${pct}% completion · 每週重置`;
+  setKpiText('lastWorkout', data.summary.lastWorkout, data.summary.lastWorkoutShort, data.summary.lastWorkoutDetail);
+  setKpiText('readiness', data.summary.readiness, data.summary.readinessShort, data.summary.readinessDetail);
   setupWorkoutMode(data);
-  document.getElementById('completionHint').textContent=`${pct}% completion`;
   dynamicCalendar(data.calendar);
   chart('completionChart',data.progress.weeklyCompletion.map(x=>x.week),[
     {label:'預計',data:data.progress.weeklyCompletion.map(x=>x.planned),backgroundColor:'rgba(204,251,241,.75)',borderColor:'rgba(15,118,110,.28)',borderWidth:1},
     {label:'完成',data:data.progress.weeklyCompletion.map(x=>x.done),backgroundColor:'rgba(20,184,166,.72)',borderColor:'#14B8A6',borderWidth:1}
   ]);
   chart('cardioChart',data.progress.cardioMinutes.map(x=>x.week),[{label:'分鐘（六月開始後顯示）',data:data.progress.cardioMinutes.map(x=>x.minutes),backgroundColor:'rgba(15,118,110,.62)',borderColor:'#0F766E',borderWidth:1}]);
-  const logs=document.getElementById('logs');
-  logs.innerHTML=data.logs.length?data.logs.map(l=>`<div class="program-day"><b>${l.date} · ${l.title}</b><div class="muted">${l.notes||''}</div></div>`).join(''):'<div class="log-empty">還沒有紀錄。六月開始後，每次運動完丟一句話，我會幫你補進這裡。</div>';
-  const program=document.getElementById('program');
-  program.innerHTML=data.coachProgram.days.length?data.coachProgram.days.map(d=>`<div class="program-day"><b>${d.name}</b><div class="muted">${d.notes||''}</div></div>`).join(''):`<div class="log-empty">${data.coachProgram.notes}</div>`;
+  renderLogs(data.logs || []);
+  renderCoachProgram(data.coachProgram || {});
 }).catch(err=>{
   const el=document.getElementById('calendar');
-  if(el) el.innerHTML=`<div class="log-empty" style="grid-column:1/-1">資料載入失敗：${err.message}</div>`;
+  if(el) el.innerHTML=`<div class="log-empty" style="grid-column:1/-1">資料載入失敗：${escapeHtml(err.message)}</div>`;
   console.error(err);
 });
 </script>
